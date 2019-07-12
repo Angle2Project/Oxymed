@@ -1,0 +1,102 @@
+---
+title: Index page
+nav: Contact
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}	
+	{% include "partials/_header.html" %}
+
+	<main class="contact">
+		<div class="wrapper">
+			<h1>Contact</h1>
+			<article class="contact__body">
+				<section class="contact__form">
+					<div class="form-control">							
+						<label>Name</label>						
+						<input type="text" name="" autocomplete="off">
+						<span class="error-text">Incorrect name!</span>						
+					</div>
+					<div class="form-control error">							
+						<label>Organization</label>						
+						<input type="text" name="" autocomplete="off">
+						<span class="error-text">Incorrect organization!</span>						
+					</div>
+					<div class="form-select">
+						<select name="" id="">
+							<option>Type</option>
+							<option value="">Type-1</option>
+							<option value="">Type-2</option>
+							<option value="">Type-3</option>							
+						</select>
+					</div>
+					<div class="form-control">
+						<label>Email</label>
+						<input type="email" name="" autocomplete="off">
+						<span class="error-text">Incorrect name!</span>
+					</div>
+					<div class="form-control">
+						<label>Phone Number</label>
+						<input type="text" id="phone-mask" name="" autocomplete="off">
+						<span class="error-text">Incorrect phone number!</span>
+					</div>
+					<div class="form-select">
+						<select name="" id="">
+							<option value="">How did you hear about us?</option>
+							<option value="">Some-1</option>
+							<option value="">Some-2</option>
+							<option value="">Some-3</option>						
+						</select>
+					</div>					
+					<div class="form-control">
+						<label>Message</label>
+						<textarea name="" id=""></textarea>
+						<span class="error-text">Send Message</span>
+					</div>
+					<div class="contact__form_submit">
+						<button class="btn">Send Message</button>						
+					</div>
+				</section>
+				<section class="contact__info">
+					<h4>But we’re friendly 🤗</h4>
+					<p>And always would be glad to see you for the cup of coffee ☕️</p>
+					<ul class="contacts-block">
+						<li>
+							{{mixins.icon('location')}}
+							<b>Address:</b>
+							<p>
+								<span>808 Koch Fords</span>
+								<span>2-nd Line of address</span>
+								<span>3-rd Line of address</span>										
+							</p>
+						</li>
+						<li>
+							{{mixins.icon('phone')}}
+							<b>Phone:</b>
+							<a href="tel:478-801-6975">478-801-6975</a>
+						</li>
+						<li>
+							{{mixins.icon('email')}}
+							<b>Email:</b>
+							<a href="mailto:jaida_rath@gmail.com">jaida_rath@gmail.com</a>
+						</li>
+						<li>
+							{{mixins.icon('email')}}
+							<b>Email:</b>
+							<a href="mailto:eulalia_kuhlman@yahoo.com">eulalia_kuhlman@yahoo.com</a>
+						</li>
+					</ul>
+					<p>Or you can write us by the form  ✉️</p>
+				</section>
+			</article>		
+		</div>
+		
+		<article class="contact__map" style="background: url('./img/map.jpg') no-repeat center / cover;"></article>
+	</main>
+
+	{% include "partials/_footer.html" %}
+
+	
+	
+
+{% endblock %}

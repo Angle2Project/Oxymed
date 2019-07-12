@@ -1,0 +1,66 @@
+---
+title: Index page
+nav: Products
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+	<main class="products">
+		<div class="wrapper">
+
+			{% set products = [				
+				{
+					name: 'ready',
+					class: 'ready'
+				},
+				{
+					name: 'prototype',
+					class: 'prototype'
+				},
+				{
+					name: 'On testing',
+					class: 'testing'
+				},
+				{
+					name: 'In development',
+					class: 'development'
+				}
+			] %}
+
+			{% for item in products %}
+			<article class="products__item">
+				<div class="marker {{item.class}}">
+					<img src="./img/marker-{{item.class}}.svg" alt="">	
+					<span>{{item.name}}</span>				
+				</div>
+				<div class="products__item_body">
+					<div class="item--description">
+						<h2>OxyMend #{{loop.index}}</h2>
+						<p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab. These methods may prove useful when traditional rehabilitation methods fail. 1. Why Do People Get Addictions?</p>
+						<a href="" class="btn border">Get to Know More</a>
+					</div>
+					<div class="item--slider">
+						<div class="slider">
+							<div>
+								<img src="./img/how-it-works.png" alt="">
+							</div>
+							{% if loop.index != 2 %}
+							<div>
+								<img src="./img/how-it-works.png" alt="">
+							</div>
+							<div>
+								<img src="./img/how-it-works.png" alt="">
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</main>
+
+{% include "partials/_footer.html" %}
+{% endblock %}

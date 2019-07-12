@@ -1,0 +1,88 @@
+// done by riverco.de
+@import 'helpers/index';
+@import 'generated/sprite-svg';
+@import 'generated/index';
+@import 'base/index';
+@import 'lib/index';
+@import 'common';
+@import 'components/index';
+@import 'pages/index';
+
+.latest-news {
+  margin-top: 112px;
+  background: url('../img/bg-latest-news.svg') no-repeat left bottom / auto 665px;
+  h2 {
+    margin-top: 8px;
+  }
+  .latest-news__list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;    
+    li {
+      width: 368px;
+      border-radius: 8px;
+      box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.07);
+      background-color: #ffffff;
+      padding-bottom: 32px;
+      cursor: pointer;
+      transition: all 200ms ease;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 25px 36px 0 rgba(0, 0, 0, 0.11);
+      }
+      .latest-news--photo {
+        height: 207px;
+        img {
+          width: 100%;
+          height: 100%;
+        }        
+      }
+      h4 {
+        margin: 24px 24px 16px 24px;
+        height: 56px;
+      }
+      p {
+        height: 134px;
+        margin: 0 24px 24px 24px;
+        opacity: 0.8;
+        letter-spacing: -0.1px;
+      }
+      time {
+        opacity: 0.5;
+        margin: 0 24px;
+      }
+    }    
+  }
+  .btn {
+    margin: 64px auto 0 auto;
+  }
+}
+.contacts-block {
+  margin-top: 24px;
+  li {
+    display: flex;
+    margin-bottom: 16px;
+    font-size: 18px;
+    .icon {
+      margin-right: 12px;
+      margin-top: 2px;
+    }
+    b {            
+      font-weight: 500;
+      color: #000;
+      width: 80px;
+      line-height: 1.5;
+    }
+    p {
+      display: flex;
+      flex-direction: column;            
+    }
+    a {
+      color: $colorHover;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

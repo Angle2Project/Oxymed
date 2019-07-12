@@ -1,0 +1,40 @@
+main.contact {
+  margin-top: 64px;
+  padding-top: 64px;
+  padding-bottom: 70px;
+  .contact__body {
+    margin-top: 32px;
+    display: flex;
+    .contact__form {
+      width: 432px;
+      .form-control,
+      .form-select {
+        margin-bottom: 20px;
+      }
+    }
+    .contact__info {
+      margin-left: 68px;      
+      padding: 54px 0 280px 100px;
+      width: 582px;
+      background: url('../img/bg-contact.svg') no-repeat center bottom / 100% auto;
+      h4 {
+        margin-bottom: 16px;
+      }
+      & > p {
+        font-size: 18px;
+        opacity: 0.8;
+        max-width: 320px;
+      }
+      .contacts-block {
+        margin: 32px 0 40px 0;
+      }
+    }
+    .contact__form_submit {
+      margin-top: 32px;
+    }
+  }
+  .contact__map {
+    margin-top: 48px;
+    height: 466px;
+  }
+}

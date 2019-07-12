@@ -1,0 +1,23 @@
+ProjectTitle: oxymed
+
+PageList:
+- file: home.html
+  ready: 100
+- file: products.html
+  ready: 100
+- file: terms.html
+  ready: 100
+- file: privacy.html
+  ready: 100
+- file: intellectual-property.html
+  ready: 100
+- file: careers.html
+  ready: 100
+- file: contact.html
+  ready: 100
+
+  
+
+  
+
+  

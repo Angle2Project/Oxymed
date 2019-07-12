@@ -1,0 +1,36 @@
+.btn {
+  width: 199px;
+  height: 64px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: -0.1px;
+  text-align: center;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorHover;
+  color: #fff;
+  transition: all 250ms ease;
+  &:hover:not(.border) {
+    box-shadow: 0 7px 20px 0 rgba(31, 150, 211, 0.36);
+    background-color: #1c8bde;
+  }
+  &:active {
+    background-color: #177bc7;
+  }
+  &.border {
+    border: solid 2px $colorHover;
+    color: $colorHover;
+    background-color: transparent;
+    &:hover {
+      background-color: rgba(28, 139, 222, 0.2);
+    }
+    &:active {
+      color: #177bc7;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+main.terms {
+  margin-top: 64px;
+  padding-top: 96px;
+  padding-bottom: 100px;
+  .wrapper {
+    max-width: 685px;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+  }
+  .terms__description {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;    
+    letter-spacing: -0.11px;
+    opacity: 0.8;
+    a {
+      color: #1c8bde;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

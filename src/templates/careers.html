@@ -1,0 +1,90 @@
+---
+title: Index page
+nav: Careers
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}	
+	{% include "partials/_header.html" %}
+
+	<main class="careers">
+		<article class="careers__hero">
+			<div class="careers__hero_bg">
+				<div class="wrapper">
+					<div class="statement">
+						<h1>General Statement</h1>
+						<p>A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.</p>
+						<h2>How to find us</h2>
+						<ul class="contacts-block">
+							<li>
+								{{mixins.icon('location')}}
+								<b>Address:</b>
+								<p>
+									<span>808 Koch Fords</span>
+									<span>2-nd Line of address</span>
+									<span>3-rd Line of address</span>										
+								</p>
+							</li>
+							<li>
+								{{mixins.icon('phone')}}
+								<b>Phone:</b>
+								<a href="tel:478-801-6975">478-801-6975</a>
+							</li>
+							<li>
+								{{mixins.icon('email')}}
+								<b>Email:</b>
+								<a href="mailto:jaida_rath@gmail.com">jaida_rath@gmail.com</a>
+							</li>
+							<li>
+								{{mixins.icon('email')}}
+								<b>Email:</b>
+								<a href="mailto:eulalia_kuhlman@yahoo.com">eulalia_kuhlman@yahoo.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</article>
+
+		<article class="careers__list">
+			<div class="wrapper">
+				<h1>List of Positions</h1>
+				{% for i in range(0, 5) %}
+				<section class="careers__list_item">
+					<h2>Middle Front-End Developer</h2>
+					<div class="item--body">
+						<div class="about">
+							<h4>About Position</h4>
+							<p>A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.</p>
+						</div>
+						<div class="skills">
+							<h4>Skills Required</h4>
+							<ul>
+								{% for i in range(0, 7) %}
+								<li>Skill</li>
+								{% endfor %}
+							</ul>	
+						</div>
+					</div>
+					<div class="item--buttons">
+						<a href="" class="btn">Apply This Job</a>
+						<a href="" class="btn border">Show More</a>
+					</div>
+				</section>
+				{% endfor %}
+			</div>
+		</article>
+
+		<article class="careers__more">
+			<div class="wrapper">
+				<a href="" class="btn border">Load More</a>
+			</div>
+		</article>
+	</main>
+
+	{% include "partials/_footer.html" %}
+
+	
+	
+
+{% endblock %}
