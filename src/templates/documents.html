@@ -1,0 +1,38 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% include "partials/_header.html" %}
+
+	<main class="documents">
+		<div class="wrapper">
+			<h1>Document Center</h1>
+			<ul class="documents__list">
+				{% set list = ['Info sheet about device', 'Patent Information', 'Logo design specifications/file', 'Regulatory'] %}
+
+				{% for item in list %}
+				<li>
+					<h4>{{item}}</h4>
+					<div class="documents__list_links">
+						<a href="">
+							{{mixins.icon('download')}}
+							<span>Download PDF</span>
+						</a>
+						{% if loop.index == 2 %}
+							<a href="">
+								{{mixins.icon('view')}}
+								<span>View on external site</span>
+							</a>
+						{% endif %}
+					</div>
+				</li>
+				{% endfor %}
+
+			</ul>
+		</div>
+	</main>
+	
+	{% include "partials/_footer.html" %}
+{% endblock %}

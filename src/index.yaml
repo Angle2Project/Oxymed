@@ -15,6 +15,10 @@ PageList:
   ready: 100
 - file: contact.html
   ready: 100
+- file: documents.html
+  ready: 100
+
+  
 
   
 
