@@ -1,0 +1,165 @@
+---
+title: Article page
+nav: Article
+---
+
+{% extends "layouts/_layout.html" %} {% block content %} {% include
+"partials/_header.html" %}
+
+<main class="article-one">
+  <div class="breadcrumbs">
+    <div class="wrapper">
+      <div class="breadcrumbs__inner">
+        <a href="news.html">News</a>
+        {{ mixins.icon('chevron-right') }}
+        <span>Headaches and Botox Injections</span>
+      </div>
+    </div>
+  </div>
+  <article class="article">
+    <div class="wrapper">
+      <h1>Headaches And Botox Injections</h1>
+      <div class="article-one__actions">
+        <time class="time"
+          >{{ mixins.icon('time') }} 6 minutes to read • Jun 11</time
+        >
+        <div class="actions">
+          <a href="" class="actions__btn">
+            {{ mixins.icon('facebook') }}
+          </a>
+          <a href="" class="actions__btn">
+            {{ mixins.icon('twitter') }}
+          </a>
+          <div class="actions__btn">
+            {{ mixins.icon('link') }}
+          </div>
+        </div>
+      </div>
+      <div class="article-one__hero">
+        <img src="img/article-pic-hero.jpg" alt="" />
+			</div>
+			<div class="article__text">
+      <p>
+        For many years, when people thought of alcohol and drug rehab, the image
+        that almost immediately came to mind was most likely a group of people,
+        sitting in a circle in folding chairs in a big vacant room. Its true
+        <a href="">that group programs</a> still aid many people in their quest to stop
+        drinking and using illegal substances but most who have fell too deep
+        into their addictions do not find relief this way. There is good news
+        for those who need help getting over their addictions – slowly, there
+        has been a proliferation of alternative therapies to alcohol and drug
+        rehab. These methods may prove useful when traditional rehabilitation
+        methods fail. 1. Why Do People Get Addictions?
+      </p>
+      <h4>24×7 Medications Online Service</h4>
+      <ul class="article__list">
+        {% set list = [ {text: 'For many years, when people thought of alcohol
+        and drug rehab, the image that almost immediately came to mind was most
+        likely a group of people.'}, {text: 'Sitting in a circle in folding
+        chairs in a big vacant room.'}, {text: 'Its true that group programs
+        still aid many people in their quest to stop drinking and using illegal
+        substances but most who have fell too deep into their addictions do not
+        find relief this way.'}, {numb: '•', text: 'There is good news for those
+        who need help getting over their addictions – slowly, there has been a
+        proliferation of alternative therapies to alcohol and drug rehab.'} ] %}
+        {% for item in list %}
+        <li class="article__list-item">
+          <span class="numb">•</span>{{ item.text }}
+        </li>
+        {% endfor %}
+      </ul>
+      <h4>2 Fav Detox Home Recipe</h4>
+      <ul class="article__list">
+        {% for item in list %}
+        <li class="article__list-item">
+          <span class="numb">{{ loop.index }}.</span>{{ item.text }}
+        </li>
+        {% endfor %}
+      </ul>
+      <p>
+        <cite
+          >Allergies and chemical sensitivities are a symptom of a compromised
+          immune system. Candida overgrowth in the body may be the precursor to
+          immune dysfunction causing all kinds of illness and allergies to
+          food.</cite
+        >
+      </p>
+      <p><img src="img/article-pic.jpg" alt="" /></p>
+      <p>
+        For many years, when people thought of alcohol and drug rehab, the image
+        that almost immediately came to mind was most likely a group of people,
+        sitting in a circle in folding chairs in a big vacant room. Its true
+        that group programs still aid many people in their quest to stop
+        drinking and using illegal substances but most who have fell too deep
+        into their addictions do not find relief this way. There is good news
+        for those who need help getting over their addictions – slowly, there
+        has been a proliferation of alternative therapies to alcohol and drug
+        rehab. These methods may prove useful when traditional rehabilitation
+        methods fail. 1. Why Do People Get Addictions?
+      </p>
+      <p>
+        The reasons for addiction are complicated and vary with each and every
+        individual. These same reasons may be difficult for us to understand,
+        and even a lot more difficult to resolve. Drug and alcohol rehab in
+        recent years has taken a hard and diverse approach to the problem of
+        addiction. Taking in consideration are the physical, emotional, and even
+        nutritional factors that may be causes. Whether you’re seeking help for
+        yourself or whether you are a concerned friend or family member of
+        someone who is in a very dangerous grip of addiction, be confident that
+        you are not the only one. Addictions come in varied forms, some are
+        dangerous and some are not. 2. The Physiological Approach
+			</p>
+			<div class="article-one__actions bottom">
+					<a href="news.html" class="backlink">{{ mixins.icon('chevron-left') }} <span>News</span></a>
+					<div class="actions">
+						<a href="" class="actions__btn">
+							{{ mixins.icon('facebook') }}
+						</a>
+						<a href="" class="actions__btn">
+							{{ mixins.icon('twitter') }}
+						</a>
+						<div class="actions__btn">
+							{{ mixins.icon('link') }}
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </article>
+</main>
+<article class="latest-news">
+  <div class="wrapper">
+    <h2>Latest News</h2>
+    <ul class="latest-news__list">
+      {% set latestNews = [ { title: 'The event name always will be displayed at
+      first.', descr: 'Never before has the need to detoxify our body system
+      become more important than today. With the advancement of technology there
+      are now more things that negatively affect our health and our
+      environment.' }, { title: 'Apricot Kernel Oil', descr: 'Because people
+      with high blood pressure do not usually have any symptoms until the
+      disease has reached an advanced stage, high blood pressure is often called
+      the “silent killer.”' }, { title: 'A Sure Way To Get Rid Of Your Back Ache
+      Problem', descr: 'Gastroenteritis means inflammation of stomach as well as
+      the gastrointestinal tract. It is also known as stomach flu. It can be
+      caused by an infection, virus, bacterium or parasite.' } ] %} {% for item
+      in latestNews %}
+      <li class="latest-news__item">
+        <div class="latest-news__photo">
+          <img src="./img/latest-news-{{ loop.index }}.png" alt="" />
+        </div>
+        <div class="latest-news__text">
+          <h4>{{ item.title }}</h4>
+          <div class="latest-news__descr">
+            <p>{{ item.descr }}</p>
+          </div>
+          <div class="latest-news__footer">
+            <time class="time">2.10.2019</time>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+
+{% include "partials/_footer.html" %} {% endblock %}

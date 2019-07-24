@@ -1,0 +1,38 @@
+---
+title: Index page
+nav: Products
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+	<main class="product">
+		
+		<article class="product__hero">
+			<div class="wrapper">
+				<h4>OxyMend #1</h4>
+				<h1>The last word in wound healing.</h1>
+				<div class="product__hero_img">
+					<img src="./img/product-hero.jpg" alt="">
+				</div>
+			</div>			
+		</article>
+
+		<article class="product__about">
+			<div class="wrapper">
+				<div class="product__about_descr">
+					<h2>About the product</h2>
+					<p>A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.</p>
+					<a href="" class="btn">Request a Sample</a>
+				</div>				
+				<div class="product__about_media">
+						<iframe width="568" height="320" src="https://www.youtube.com/embed/NUC2EQvdzmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>			 
+		</article>
+
+	</main>
+
+{% include "partials/_footer.html" %}
+{% endblock %}
