@@ -4,7 +4,7 @@ $(document).ready(function(){
   if($(".slider").length){
     $(".slider").slick();
   }
-
+  
   // Form 
   $('.form-control input, .form-control textarea').focus(function(e){
     $(this).closest('.form-control').addClass('focus');
@@ -18,4 +18,12 @@ $(document).ready(function(){
     $(this).closest('.form-select').addClass('selected');
   });
   $('#phone-mask').mask('000-000-0000');
+
+  // $( ".has-popover" ).hover(
+  //   function() {
+  //     $( this ).find('.popover').fadeIn();
+  //   }, function() {
+  //     $( this ).find('.popover').fadeOut();
+  //   }
+  // );
 });

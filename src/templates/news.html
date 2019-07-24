@@ -1,0 +1,65 @@
+---
+title: Index page
+nav: News
+---
+
+{% extends "layouts/_layout.html" %} {% block content %} {% include
+"partials/_header.html" %}
+
+<main class="news">
+  <article class="latest-news latest-news--blog">
+    <div class="wrapper">
+      <h1>News</h1>
+      <ul class="latest-news__list">
+        {% set latestNews = [ { title: 'Want To Live Longer Detox', picPath:
+        'latest-news-1.png' }, { title: 'The Risks Of Lasik Surgery', picPath:
+        'latest-news-2.png' }, { title: 'Treatment Of Fibromyalgia', picPath:
+        'latest-news-3.png' }, { title: 'Want To Live Longer Detox', picPath:
+        'latest-news-2.png' }, { title: 'The Risks Of Lasik Surgery', picPath:
+        'latest-news-3.png' }, { title: 'The Risks Of Lasik Surgery', picPath:
+        'latest-news-2.png' }, { title: 'Treatment Of Fibromyalgia', picPath:
+        'latest-news-1.png' } ] %} {% for item in latestNews %}
+        <li class="latest-news__item {% if loop.index == 1 %} first-news-item{% endif %}">
+          <div class="latest-news__photo">
+            <img src="./img/{{ item.picPath }}" alt="" />
+          </div>
+          <div class="latest-news__text">
+            <h4>{{ item.title }}</h4>
+            <time class="time">{{ mixins.icon('time') }} 6 minutes to read • Jun 11</time>
+            <div class="latest-news__descr">
+              <p>
+                If you know of a child who is having a greater degree of
+                language impairment than other children or has diminished
+                communication skills and also exhibits a restrictive pattern.
+              </p>
+            </div>
+            <div class="latest-news__footer">
+              <div class="actions">
+                <div class="actions__btn has-popover">
+                  {{ mixins.icon('share') }}
+                  <div class="popover">
+										<div class="popover__inner">
+											<a href="">
+												{{ mixins.icon('facebook') }}
+											</a>
+											<a href="">
+												{{ mixins.icon('twitter') }}
+											</a>
+										</div>
+                  </div>
+                </div>
+                <div class="actions__btn">
+                  {{ mixins.icon('link') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="" class="btn border btn--more">Load More</a>
+    </div>
+  </article>
+</main>
+
+{% include "partials/_footer.html" %} {% endblock %}

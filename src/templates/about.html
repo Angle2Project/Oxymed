@@ -1,0 +1,134 @@
+---
+title: Index page
+nav: Company
+---
+
+{% extends "layouts/_layout.html" %} {% block content %} {% include
+"partials/_header.html" %}
+
+<main class="about">
+  <article class="home__hero">
+    <div class="wrapper">
+      <h1>About the company</h1>
+      <p>
+        A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.
+      </p>      
+    </div>
+  </article>
+
+  <article class="about__mission">
+    <div class="wrapper">      
+      <div class="description">
+        <h2>Our mission</h2>
+        <p>
+          Many of us have back problems, it is a very wide problem for people, ever since we started walking on our tow legs and raised our backs a large percent of human have suffered pain in the back from different reasons. The chiropractic was invented to help solve or reduce back pain by training back experts that will offer help and relief to those needing back pain help.
+          <br><br>
+          The great advantage that chiropractor have is the fact they focus only on the back, a chiropractor knows almost anything there is to know about the back, the spine, the nervous system structure and the biochemical patterns in the back, and that is the major reason why many people use chiropractors not only for help but also for a diagnosis that will send them the right way if the chiropractor couldn’t help.
+        </p>        
+      </div>
+    </div>
+  </article>
+
+  <article class="about__members">
+    <div class="wrapper">
+      <h2>Team members</h2>
+      <ul class="about__members_list">
+        {% for i in range(0, 6) %}
+        <li>
+          <div class="photo">
+            <img src="./img/about-members-{{loop.index}}.jpg" alt="">
+          </div>
+          <div class="title">
+            <h4>Harinder Bharwal</h4>
+            <p>CEO</p>
+          </div>
+          <div class="description">
+            <div class="description--text">
+              Ever heard of the Fuller Brush Man?
+              <br>
+              You know, those legendary guys who came knocking on the front doors of America, selling brushes, mops and cleaners?
+              <br><br>
+              I was one of them, back in my early twenties.
+              <br><br>
+              I had just quit a job in an employment agency after four-and-a-half very long, very stressful days.
+          </div>
+          <div class="description--share">
+            <a href="">
+              {{mixins.icon('facebook')}}
+            </a>
+            <a href="">
+              {{mixins.icon('twitter')}}
+            </a>
+            <a href="">
+              {{mixins.icon('linkedin')}}
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="" class="btn become">Become a Part of Team</a>
+    </div>
+  </article>
+  
+  <article class="about__members no-bg">
+    <div class="wrapper">
+      <h2>Board members</h2>
+      <ul class="about__members_list">
+        {% for i in range(0, 6) %}
+        <li>
+          <div class="photo">
+            <img src="./img/about-members-{{loop.index}}.jpg" alt="">
+          </div>
+          <div class="title">
+            <h4>Harinder Bharwal</h4>
+            <p>CEO</p>
+          </div>
+          <div class="description">
+            <div class="description--text">
+              Ever heard of the Fuller Brush Man?
+              <br>
+              You know, those legendary guys who came knocking on the front doors of America, selling brushes, mops and cleaners?
+              <br><br>
+              I was one of them, back in my early twenties.
+              <br><br>
+              I had just quit a job in an employment agency after four-and-a-half very long, very stressful days.
+          </div>
+          <div class="description--share">
+            <a href="">
+              {{mixins.icon('facebook')}}
+            </a>
+            <a href="">
+              {{mixins.icon('twitter')}}
+            </a>
+            <a href="">
+              {{mixins.icon('linkedin')}}
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>      
+    </div>
+  </article> 
+
+  <article class="partners">
+    <div class="wrapper">
+      <h2>Investors</h2>
+      <ul class="partners__list">
+        <li>
+          <img src="./img/partners-logo.svg" alt="">
+        </li>
+        <li>
+          <img src="./img/partners-logo.svg" alt="">
+        </li>
+        <li>
+          <img src="./img/partners-logo.svg" alt="">
+        </li>
+        <li>
+          <img src="./img/partners-logo.svg" alt="">
+        </li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+{% include "partials/_footer.html" %} {% endblock %}

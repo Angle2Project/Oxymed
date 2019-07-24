@@ -2,131 +2,124 @@
 title: Index page
 nav: Home
 ---
-{% extends "layouts/_layout.html" %}
 
-{% block content %}	
-	{% include "partials/_header.html" %}
+{% extends "layouts/_layout.html" %} {% block content %} {% include
+"partials/_header.html" %}
 
-	<main class="home">
-		<article class="home__hero">
-			<div class="wrapper">
-				<h1>New way to heal wounds in a couple of days</h1>
-				<p>A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.</p>
-				<a href="" class="btn border">Learn More</a>
-			</div>
-		</article>
+<main class="home">
+  <article class="home__hero">
+    <div class="wrapper">
+      <h1>New way to heal wounds in a couple of days</h1>
+      <p>
+        A keystone of one of television’s most popular series is the practice of
+        therapy in HBO’s The Sopranos. The Sopranos manages to address the
+        biases and benefits of therapy and treatment while also combining
+        clear-cut, unavoidable realities as to its effectiveness and the reasons
+        why it seems to be everywhere. Just like on the show, therapy has long
+        been thought of as untrustworthy, the refuge of the weak, practiced by
+        money grabbing pseudo.
+      </p>
+      <a href="" class="btn border">Learn More</a>
+    </div>
+  </article>
 
-		<article class="how-it-works">
-			<div class="wrapper">
-				<div class="illustration">					
-					<img src="./img/how-it-works.png" alt="">					
-				</div>
-				<div class="description">
-					<h2>How it works?</h2>
-					<p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab.</p>
-					<a href="" class="btn border">Get to Know More</a>
-				</div>
-			</div>
-		</article>
+  <article class="how-it-works">
+    <div class="wrapper">
+      <div class="illustration">
+        <img src="./img/how-it-works.png" alt="" />
+      </div>
+      <div class="description">
+        <h2>How it works?</h2>
+        <p>
+          For many years, when people thought of alcohol and drug rehab, the
+          image that almost immediately came to mind was most likely a group of
+          people, sitting in a circle in folding chairs in a big vacant room.
+          Its true that group programs still aid many people in their quest to
+          stop drinking and using illegal substances but most who have fell too
+          deep into their addictions do not find relief this way. There is good
+          news for those who need help getting over their addictions – slowly,
+          there has been a proliferation of alternative therapies to alcohol and
+          drug rehab.
+        </p>
+        <a href="" class="btn border">Get to Know More</a>
+      </div>
+    </div>
+  </article>
 
-		<article class="benefits">
-			<div class="wrapper">
-				<h6>Why we’re better</h6>
-				<h2>Benefits</h2>
-				<ul class="benefits__list">
-					{% set benefits = [
-						{
-							icon: 'delivery',
-							title: 'Oxygen Delivery',
-							descr: 'High Penetration of Biofilm'
-						},
-						{
-							icon: 'mobility',
-							title: 'Patient Mobility',
-							descr: 'Wearable 24/7, Slim Profile, Flexible'
-						},
-						{
-							icon: 'duration',
-							title: 'Oxygen Duration',
-							descr: '72hr Continuous Oxygen Flow'
-						},
-						{
-							icon: 'cost',
-							title: 'Cost',
-							descr: '10X Lower Cost Compared to HBOT'
-						},
-						{
-							icon: 'reimbursement',
-							title: 'Insurance Reimbursement',
-							descr: 'Reimbursable'
-						}
-					] %}
-	
-					{% for item in benefits %}
-					<li>
-						<div class="benefits--icon">
-							<img src="./img/{{item.icon}}.svg" alt="">
-						</div>
-						<div class="benefits--title">{{item.title}}</div>
-						<div class="benefits--description">{{item.descr}}</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<a href="" class="btn">Request a Sample</a>
-			</div>
-		</article>
+  <article class="benefits">
+    <div class="wrapper">
+      <h6>Why we’re better</h6>
+      <h2>Benefits</h2>
+      <ul class="benefits__list">
+        {% set benefits = [ { icon: 'delivery', title: 'Oxygen Delivery', descr:
+        'High Penetration of Biofilm' }, { icon: 'mobility', title: 'Patient
+        Mobility', descr: 'Wearable 24/7, Slim Profile, Flexible' }, { icon:
+        'duration', title: 'Oxygen Duration', descr: '72hr Continuous Oxygen
+        Flow' }, { icon: 'cost', title: 'Cost', descr: '10X Lower Cost Compared
+        to HBOT' }, { icon: 'reimbursement', title: 'Insurance Reimbursement',
+        descr: 'Reimbursable' } ] %} {% for item in benefits %}
+        <li>
+          <div class="benefits--icon">
+            <img src="./img/{{ item.icon }}.svg" alt="" />
+          </div>
+          <div class="benefits--title">{{ item.title }}</div>
+          <div class="benefits--description">{{ item.descr }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="" class="btn">Request a Sample</a>
+    </div>
+  </article>
 
-		<article class="latest-news">			
-			<div class="wrapper">
-				<h6>1 event coming</h6>
-				<h2>Latest News</h2>
-				<ul class="latest-news__list">
-					{% set latestNews = [
-						{
-							title: 'The event name always will be displayed at first.',
-							descr: 'Never before has the need to detoxify our body system become more important than today. With the advancement of technology there are now more things that negatively affect our health and our environment.'						
-						},
-						{
-							title: 'Apricot Kernel Oil',
-							descr: 'Because people with high blood pressure do not usually have any symptoms until the disease has reached an advanced stage, high blood pressure is often called the “silent killer.”'
-						},
-						{
-							title: 'A Sure Way To Get Rid Of Your Back Ache Problem',
-							descr: 'Gastroenteritis means inflammation of stomach as well as the gastrointestinal tract. It is also known as stomach flu. It can be caused by an infection, virus, bacterium or parasite.'
-						}
-					] %}
-					{% for item in latestNews %}
-					<li>
-						<div class="latest-news--photo">
-							<img src="./img/latest-news-{{loop.index}}.png" alt="">
-						</div>
-						<h4>{{item.title}}</h4>
-						<p>{{item.descr}}</p>
-						<time>2.10.2019</time>	
-					</li>
-					{% endfor %}
-				</ul>
-				<a href="" class="btn border">Show More</a>
-			</div>
-		</article>
+  <article class="latest-news">
+    <div class="wrapper">
+      <h6>1 event coming</h6>
+      <h2>Latest News</h2>
+      <ul class="latest-news__list">
+        {% set latestNews = [ { title: 'The event name always will be displayed
+        at first.', descr: 'Never before has the need to detoxify our body
+        system become more important than today. With the advancement of
+        technology there are now more things that negatively affect our health
+        and our environment.' }, { title: 'Apricot Kernel Oil', descr: 'Because
+        people with high blood pressure do not usually have any symptoms until
+        the disease has reached an advanced stage, high blood pressure is often
+        called the “silent killer.”' }, { title: 'A Sure Way To Get Rid Of Your
+        Back Ache Problem', descr: 'Gastroenteritis means inflammation of
+        stomach as well as the gastrointestinal tract. It is also known as
+        stomach flu. It can be caused by an infection, virus, bacterium or
+        parasite.' } ] %} {% for item in latestNews %}
+        <li class="latest-news__item">
+          <div class="latest-news__photo">
+            <img src="./img/latest-news-{{ loop.index }}.png" alt="" />
+          </div>
+          <div class="latest-news__text">
+            <h4>{{ item.title }}</h4>
+            <div class="latest-news__descr">
+              <p>{{ item.descr }}</p>
+            </div>
+            <div class="latest-news__footer">
+              <time class="time">2.10.2019</time>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="" class="btn border">Show More</a>
+    </div>
+  </article>
 
-		<article class="partners">
-			<div class="wrapper">
-				<h2>Our Partners</h2>
-				<ul class="partners__list">
-					{% for i in range(0, 4) %}
-					<li>
-						<img src="./img/partners-logo.svg" alt="">
-					</li>
-					{% endfor %}
-				</ul>
-			</div>			
-		</article>
-	</main>
+  <article class="partners">
+    <div class="wrapper">
+      <h2>Our Partners</h2>
+      <ul class="partners__list">
+        {% for i in range(0, 4) %}
+        <li>
+          <img src="./img/partners-logo.svg" alt="" />
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+</main>
 
-	{% include "partials/_footer.html" %}
-
-	
-	
-
-{% endblock %}
+{% include "partials/_footer.html" %} {% endblock %}
