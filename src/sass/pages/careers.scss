@@ -41,7 +41,13 @@ main.careers {
           flex-shrink: 0;
           margin-right: 104px;
           p {
-            opacity: 0.8;           
+            opacity: 0.8;
+            max-height: 182px;
+            transition: all 250ms ease;
+            overflow: hidden;
+            span {
+              display: block;
+            }
           }
         }
         .skills {

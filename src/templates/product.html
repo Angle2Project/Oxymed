@@ -14,7 +14,7 @@ nav: Products
 				<h4>OxyMend #1</h4>
 				<h1>The last word in wound healing.</h1>
 				<div class="product__hero_img">
-					<img src="./img/product-hero.jpg" alt="">
+					<img src="./img/product-hero.png" alt="">
 				</div>
 			</div>			
 		</article>
@@ -30,6 +30,185 @@ nav: Products
 						<iframe width="568" height="320" src="https://www.youtube.com/embed/NUC2EQvdzmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>			 
+		</article>
+
+		<article class="product__features">
+			<div class="product__features_bg">
+				<div class="wrapper">
+					<h5>Get something special</h5>
+					<div class="product__features_body">
+						<section>
+							<h2>Features</h2>
+							<p>
+								Kidney stones are very hard mineral deposits that happen to form in the kidney. They start off like a small microscopic particle and after a period of time develop into stones. These are formed when urine is highly concentrated.
+							</p>
+							<a href="" class="btn border">Get to Know More</a>
+						</section>
+						<section>
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/deep-penitration.svg" alt="">
+									<h4>Deep Penitration</h4>
+								</div>
+								<p>Microfabricated fingerlike projections enabling penetration of biofilm.</p>
+							</div>
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/controlled.svg" alt="">
+									<h4>Controlled</h4>
+								</div>
+								<p>Direct controlled oxygen delivery. Now you can control how much oxygen you’d like to have.</p>
+							</div>
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/much-oxygen.svg" alt="">
+									<h4>Much Oxygen</h4>
+								</div>
+								<p>An electrochemical cell provides continuous oxygen flow for at least 72h.</p>
+							</div>
+						</section>
+						<section>
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/innovative.svg" alt="">
+									<h4>Innovative</h4>
+								</div>
+								<p>Novel Nickel based catalytic process enables miniaturization and is embedded into silicone..</p>
+							</div>
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/safety.svg" alt="">
+									<h4>Safety</h4>
+								</div>
+								<p>Hermetically sealed. Hermetically sealed. Hermetically sealed. .</p>
+							</div>							
+							<div class="features--item">
+								<div class="title">
+									<img src="./img/ecological.svg" alt="">
+									<h4>Ecological</h4>
+								</div>
+								<p>Disposable. Disposable. Disposable. Disposable. Disposable..</p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>			
+		</article>
+
+		<article class="benefits">
+			<div class="wrapper">
+				<h6>Why we’re better</h6>
+				<h2>Benefits</h2>
+				<ul class="benefits__list">
+					{% set benefits = [ { icon: 'delivery', title: 'Oxygen Delivery', descr:
+					'High Penetration of Biofilm' }, { icon: 'mobility', title: 'Patient
+					Mobility', descr: 'Wearable 24/7, Slim Profile, Flexible' }, { icon:
+					'duration', title: 'Oxygen Duration', descr: '72hr Continuous Oxygen
+					Flow' }, { icon: 'cost', title: 'Cost', descr: '10X Lower Cost Compared
+					to HBOT' }, { icon: 'reimbursement', title: 'Insurance Reimbursement',
+					descr: 'Reimbursable' } ] %} {% for item in benefits %}
+					<li>
+						<div class="benefits--icon">
+							<img src="./img/{{ item.icon }}.svg" alt="" />
+						</div>
+						<div class="benefits--title">{{ item.title }}</div>
+						<div class="benefits--description">{{ item.descr }}</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<a href="" class="btn">Request a Sample</a>
+			</div>
+		</article>
+
+		<article class="product__stats">
+			<div class="wrapper">
+				<div class="product__stats_graphic">
+					<div class="graphic--path">
+						<img src="./img/product-graphic.png" alt="">
+					</div>
+					<div class="graphic--point">
+						<span>1000 ppm for 27 min</span>
+					</div>
+				</div>
+				<div class="product__stats_description">
+					<h2>A few stats</h2>
+					<p>A keystone of one of television’s most popular series is the practice of therapy in HBO’s The Sopranos. The Sopranos manages to address the biases and benefits of therapy and treatment while also combining clear-cut, unavoidable realities as to its effectiveness and the reasons why it seems to be everywhere. Just like on the show, therapy has long been thought of as untrustworthy, the refuge of the weak, practiced by money grabbing pseudo.</p>
+					<a href="" class="btn border">Get to Know More</a>
+				</div>
+			</div>
+		</article>
+
+		<article class="product__request">
+			<div class="product__request_bg-1">
+				<img src="./img/bg-product-form-1.svg" alt="">
+			</div>
+			<div class="product__request_bg-2">
+				<img src="./img/bg-product-form-2.svg" alt="">
+			</div>
+			<div class="wrapper">
+				<h2>Request a Sample</h2>
+				<p>
+					Disclaimer: OxyMend is not FDA cleared and is not currently available for sale.<br>
+					Samples of the device are available for research and development purposes only.<br>
+					Sample requests may be rejected for any reason at our sole discretion.
+				</p>
+				<div class="product__request_form">
+					<form action="">
+						<div class="form-control">
+							<label>Name</label>
+							<input type="text" name="" autocomplete="off">
+							<span class="error-text">Incorrect name!</span>
+						</div>
+						<div class="form-control">
+							<label>Organization</label>
+							<input type="text" name="" autocomplete="off">
+							<span class="error-text">Incorrect organization!</span>
+						</div>
+						<div class="form-select">
+							<select name="" id="">
+								<option>Type</option>
+								<option value="">Type-1</option>
+								<option value="">Type-2</option>
+								<option value="">Type-3</option>
+							</select>
+						</div>
+						<div class="form-control error">
+							<label>Email</label>
+							<input type="email" name="" autocomplete="off">
+							<span class="error-text">Incorrect name!</span>
+						</div>
+						<div class="form-control">
+							<label>Phone Number</label>
+							<input type="text" id="phone-mask" name="" autocomplete="off" maxlength="12">
+							<span class="error-text">Incorrect phone number!</span>
+						</div>
+						<div class="form--submit">
+							<button class="btn">Request a Sample</button>
+						</div>
+					</form>
+				</div>
+			</div>			
+		</article>
+
+		<article class="product__faq">
+			<div class="wrapper">
+				<h2>FAQ</h2>
+				<ul class="faq__list">
+
+					{% set list = ["How can I order this device?", "What happens if I'd break the sample device?", "When will be a release?", "How it works?", "When will be a release?"]%}
+					{% for i in list %}
+					<li>
+						<div class="title">
+							
+							<span>{{i}}</span>
+						</div>
+						<div class="answer">
+							<p>You can find a detailed description of the processes is going when the device working on the <a href="">Technology</a> page.</p>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</article>
 
 	</main>

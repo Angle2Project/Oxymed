@@ -99,4 +99,287 @@ main.product {
       }
     }
   }
+  .product__features {
+    margin-top: 64px;    
+    background: url('../img/bg-product-features-2.svg') no-repeat right top / auto 490px;
+    .product__features_bg {
+      padding: 100px 0 195px 0;
+      background: url('../img/bg-product-features-1.svg') no-repeat left bottom / auto 490px;
+    }
+    h5 {
+      font-size: 12px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -0.07px;
+      color: #44d4ca;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .product__features_body {
+      display: flex;
+      justify-content: space-between;
+      section {
+        flex-grow: 1;
+        margin: 0 16px;        
+        width: 33.333333333333336%;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        h2 {
+          line-height: normal;
+        }
+        p {
+          margin-top: 24px;
+          line-height: 1.63;
+        }
+        .btn {
+          margin-top: 64px;
+        }
+        .features--item {
+          margin-bottom: 40px;
+          .title {
+            display: flex;
+            align-items: center;
+            img {
+              width: 40px;
+              height: 40px;
+              margin-right: 12px;
+            }            
+          }
+          p {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+  .benefits {
+    margin-top: -80px;
+    text-align: center;
+    background: url('../img/bg-benefits.svg') no-repeat right top / auto 670px;
+    h2 {
+      margin-top: 8px;
+    }
+    .benefits__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 48px -16px 0 -16px;      
+      li {
+        border-radius: 8px;
+        box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.07);
+        background-color: #ffffff;
+        height: 342px;
+        width: calc(33.333333% - 32px);
+        margin: 0 16px 40px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .benefits--icon {
+          width: 120px;
+          height: 120px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .benefits--title {
+          margin-top: 40px;
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: -0.15px;
+          text-align: center;
+        }
+        .benefits--description {
+          margin-top: 16px;
+          opacity: 0.8;          
+        }
+      }
+    }
+    .btn {
+      margin: 24px auto 0 auto;
+    }
+  }
+  .product__stats {
+    margin-top: 88px;
+    position: relative;
+    z-index: 1;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .product__stats_graphic {
+      width: 503px;
+      height: 455px;
+      flex-shrink: 0;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.07);
+      background-color: #ffffff;
+      &:hover {
+        .graphic--point {
+          span {
+            transform: translateX(-50%) scale(1);
+          }
+        }
+      }
+      cursor: pointer;
+      .graphic--path {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        img {
+          width: 100%;
+        }
+      }
+      .graphic--point {
+        width: 16px;
+        height: 16px;
+        background-color: #1c8bde;
+        border-radius: 50%;
+        position: absolute;
+        right: 214px;
+        bottom: 234px;
+        span {
+          display: flex;
+          white-space: nowrap;
+          height: 40px;
+          border-radius: 4px;
+          box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.07);
+          background-color: #ffffff;
+          padding: 0 16px;
+          align-items: center;
+          position: absolute;
+          bottom: calc(100% + 5px);
+          left: 50%;
+          transform: translateX(-50%) scale(0);
+          transition: all 200ms ease;
+        }
+      }
+    }
+    .product__stats_description {
+      flex-grow: 1;
+      margin-left: 98px;
+      padding-top: 34px;
+      h2 {
+        margin-bottom: 16px;
+      }
+      .btn {
+        margin-top: 56px;
+      }
+    }
+  }
+  .product__request {
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+    .product__request_bg-1 {
+      width: 280px;
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      bottom: 64px;
+      img {
+        width: 100%;
+      }
+    }
+    .product__request_bg-2 {
+      width: 313px;
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      bottom: -21px;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      margin-top: 24px;
+    }
+    .product__request_form {
+      width: 432px;
+      margin: 40px auto 0 auto;
+      text-align: left;
+      .form-control,
+      .form-select {
+        margin-bottom: 20px;
+      }
+      .form--submit {
+        margin-top: 28px;
+        text-align: center;
+        .btn {
+          margin: auto;
+        }
+      }
+    }
+  }
+  .product__faq {
+    margin-top: 144px;
+    background: url('../img/bg-product-faq.png') no-repeat right bottom / auto 519px;
+  }
+  .faq__list {
+    margin-top: 44px;
+    width: 670px;
+    li {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }        
+      &.active {
+        .title {
+          color: $colorHover;
+          &::before {
+            border-top-color: $colorHover;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        padding: 18px 24px 18px 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+        background-color: #ffffff;        
+        cursor: pointer;
+        transition: all 250ms ease;
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #333;
+          margin-right: 24px;
+          transition: all 250ms ease;
+        }        
+      }
+      .answer {
+        padding-top: 16px;
+        padding-left: 32px;
+        overflow: hidden;
+        display: none;
+        p {          
+          border-radius: 8px;
+          background-color: #f1f4f9;
+          padding: 16px 32px;
+          color: rgba(51, 51, 51, 0.8);
+          a {
+            color: $colorHover;
+          }
+        }
+      }
+    }
+  }
 }
