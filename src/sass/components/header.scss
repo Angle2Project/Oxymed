@@ -56,4 +56,13 @@ header {
       }
     }
   }
+
+  @media screen and (max-width: 1170px) {
+    .header__nav {
+      li {
+        font-size: 15px;
+        padding: 0 15px;
+      }
+    }
+  }
 }

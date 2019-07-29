@@ -598,6 +598,13 @@ header .header__nav li a:hover {
   color: #1c8bde;
 }
 
+@media screen and (max-width: 1170px) {
+  header .header__nav li {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}
+
 footer {
   position: relative;
   background-color: #1c8bde;

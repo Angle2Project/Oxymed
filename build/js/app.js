@@ -40,8 +40,7 @@ $(document).ready(function(){
     }else{
       $(this).attr('data-mode', 'show').html('Show More');
       $(this).closest('.careers__list_item').find('.about p').removeAttr('style');
-    }
-    
+    }    
     console.log(h, m);
   });
 
