@@ -1,8 +1,28 @@
 main.careers {
   padding-bottom: 72px;
   .careers__hero {
-    padding-top: 64px;    
-    background: url('../img/bg-careers-hero.png') no-repeat right top / auto 731px;
+    padding-top: 64px;        
+    &::after {
+      content: "";
+      display: block;    
+      background: url('../img/bg-home-hero.png') no-repeat right top / contain;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      background: url('../img/bg-careers-hero.png') no-repeat right top / auto 731px;
+    }
+    @media screen and (max-width: 1200px) {
+      &::after {
+        opacity: 0.7;
+      }      
+    }
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
     .careers__hero_bg {
       background: url("../img/bg-latest-news.svg") no-repeat left bottom/auto 442px;
       padding-bottom: 40px;
@@ -79,4 +99,65 @@ main.careers {
       margin: auto;
     }
   }
+  // @max-width: 900px
+  @media screen and (max-width: 900px) {
+    .careers__hero {
+      padding-top: 48px;
+      &::after {
+        opacity: 0.7;
+      }
+      .statement {
+        width: auto;
+        margin-top: 32px;
+        h1 {
+          font-size: 32px;
+          text-align: center;
+        }
+        h2 {
+          margin-right: 48px;
+          font-size: 30px;
+        }
+        .contacts-block {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .careers__list {
+      margin-top: 100px;
+      h1 {
+        font-size: 30px;
+        margin-bottom: 32px;
+      }
+      .careers__list_item {
+        h2 {
+          font-size: 20px;
+        }
+        .item--body {
+          flex-direction: column;
+          h4 {
+            font-size: 14px;
+          }
+          .about {
+            width: auto;
+            margin-right: 0;
+          }
+          .skills {
+            margin-top: 24px;
+          }          
+        }
+        .item--buttons {
+          display: block;
+          .btn {
+            margin: 0 auto 24px auto;
+            &:last-child {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End @max-width: 900px
 }

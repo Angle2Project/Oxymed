@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Index page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
     <meta name="theme-color" content="#fff" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no" />
@@ -14,34 +14,54 @@
     <!-- BEGIN content -->
     <header>
       <div class="wrapper">
+        <div class="mobile-button" data-action="menu"></div>
         <div class="header__logo">
           <a href="./">
             <img src="./img/main-logo.svg" alt="">
           </a>
         </div>
-        <ul class="header__nav">
-          <li class="">
-            <a href="home.html">Home</a>
-          </li>
-          <li class="">
-            <a href="about.html">Company</a>
-          </li>
-          <li class="active">
-            <a href="products.html">Products</a>
-          </li>
-          <li class="">
-            <a href="">Technology</a>
-          </li>
-          <li class="">
-            <a href="careers.html">Careers</a>
-          </li>
-          <li class="">
-            <a href="news.html">News</a>
-          </li>
-          <li class="">
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <div class="header__nav_wrapper">
+          <ul class="header__nav">
+            <li class="">
+              <a href="home.html">Home</a>
+            </li>
+            <li class="">
+              <a href="about.html">Company</a>
+            </li>
+            <li class="active">
+              <a href="products.html">Products</a>
+            </li>
+            <li class="">
+              <a href="">Technology</a>
+            </li>
+            <li class="">
+              <a href="careers.html">Careers</a>
+            </li>
+            <li class="">
+              <a href="news.html">News</a>
+            </li>
+            <li class="">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="header__nav_social">
+            <a href="">
+              <svg class="icon icon-facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="">
+              <svg class="icon icon-twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href="">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     <main class="product">
@@ -71,18 +91,25 @@
           <div class="wrapper">
             <h5>Get something special</h5>
             <div class="product__features_body">
-              <section>
+              <section class="left">
                 <h2>Features</h2>
                 <p> Kidney stones are very hard mineral deposits that happen to form in the kidney. They start off like a small microscopic particle and after a period of time develop into stones. These are formed when urine is highly concentrated. </p>
                 <a href="" class="btn border">Get to Know More</a>
               </section>
-              <section>
+              <section class="rigth">
                 <div class="features--item">
                   <div class="title">
                     <img src="./img/deep-penitration.svg" alt="">
                     <h4>Deep Penitration</h4>
                   </div>
                   <p>Microfabricated fingerlike projections enabling penetration of biofilm.</p>
+                </div>
+                <div class="features--item">
+                  <div class="title">
+                    <img src="./img/innovative.svg" alt="">
+                    <h4>Innovative</h4>
+                  </div>
+                  <p>Novel Nickel based catalytic process enables miniaturization and is embedded into silicone..</p>
                 </div>
                 <div class="features--item">
                   <div class="title">
@@ -93,26 +120,17 @@
                 </div>
                 <div class="features--item">
                   <div class="title">
-                    <img src="./img/much-oxygen.svg" alt="">
-                    <h4>Much Oxygen</h4>
-                  </div>
-                  <p>An electrochemical cell provides continuous oxygen flow for at least 72h.</p>
-                </div>
-              </section>
-              <section>
-                <div class="features--item">
-                  <div class="title">
-                    <img src="./img/innovative.svg" alt="">
-                    <h4>Innovative</h4>
-                  </div>
-                  <p>Novel Nickel based catalytic process enables miniaturization and is embedded into silicone..</p>
-                </div>
-                <div class="features--item">
-                  <div class="title">
                     <img src="./img/safety.svg" alt="">
                     <h4>Safety</h4>
                   </div>
                   <p>Hermetically sealed. Hermetically sealed. Hermetically sealed. .</p>
+                </div>
+                <div class="features--item">
+                  <div class="title">
+                    <img src="./img/much-oxygen.svg" alt="">
+                    <h4>Much Oxygen</h4>
+                  </div>
+                  <p>An electrochemical cell provides continuous oxygen flow for at least 72h.</p>
                 </div>
                 <div class="features--item">
                   <div class="title">
@@ -172,7 +190,7 @@
       </article>
       <article class="product__stats">
         <div class="wrapper">
-          <div class="product__stats_graphic">
+          <div class="product__stats_graphic" data-action="graphic-touch">
             <div class="graphic--path">
               <img src="./img/product-graphic.png" alt="">
             </div>

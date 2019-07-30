@@ -1,48 +1,62 @@
 <header>
   <div class="wrapper">
+    <div class="mobile-button" data-action="menu"></div>
     <div class="header__logo">
       <a href="./">
         <img src="./img/main-logo.svg" alt="">
       </a>
     </div>
-    <ul class="header__nav">
-      {% set 
-        list = [
-          {
-            title: 'Home',
-            href: 'home.html'
-          },
-          {
-            title: 'Company',
-            href: 'about.html'
-          },
-          {
-            title: 'Products',
-            href: 'products.html'
-          },
-          {
-            title: 'Technology',
-            href: ''
-          },
-          {
-            title: 'Careers',
-            href: 'careers.html'
-          },
-          {
-            title: 'News',
-            href: 'news.html'
-          },
-          {
-            title: 'Contact',
-            href: 'contact.html'
-          }            
-        ] 
-      %}
-      {% for item in list %}
-      <li class="{% if nav == item.title%}active{% endif %}">
-        <a href="{{item.href}}">{{item.title}}</a>
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="header__nav_wrapper">
+      <ul class="header__nav">
+        {% set 
+          list = [
+            {
+              title: 'Home',
+              href: 'home.html'
+            },
+            {
+              title: 'Company',
+              href: 'about.html'
+            },
+            {
+              title: 'Products',
+              href: 'products.html'
+            },
+            {
+              title: 'Technology',
+              href: ''
+            },
+            {
+              title: 'Careers',
+              href: 'careers.html'
+            },
+            {
+              title: 'News',
+              href: 'news.html'
+            },
+            {
+              title: 'Contact',
+              href: 'contact.html'
+            }            
+          ] 
+        %}
+        {% for item in list %}
+        <li class="{% if nav == item.title%}active{% endif %}">
+          <a href="{{item.href}}">{{item.title}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="header__nav_social">
+        <a href="">
+          {{mixins.icon('facebook')}}
+        </a>
+        <a href="">
+          {{mixins.icon('twitter')}}
+        </a>
+        <a href="">
+          {{mixins.icon('linkedin')}}
+        </a>
+      </div>
+    </div>    
   </div>
 </header>

@@ -9,10 +9,17 @@ body {
 	line-height: 1.63;
 	color: $colorText;
 	letter-spacing: -0.1px;
+	@media screen and (max-width: 900px) {
+		font-size: 14px;
+	}
 }
 .wrapper {
-	max-width: 1170px;
+	max-width: 1220px;
 	margin: auto;
+	padding: 0 25px;
+	@media screen and (max-width: 900px) {
+		padding: 0 15px;
+	}
 }
 a {
 	text-decoration: none;	
@@ -23,7 +30,7 @@ h1 {
 	font-weight: bold;	
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+	line-height: normal;	
 }
 h2 {
 	font-size: 40px;

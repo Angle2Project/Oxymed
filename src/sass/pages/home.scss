@@ -51,12 +51,129 @@ main.home {
     .btn {
       margin: 24px auto 0 auto;
     }
-  }  
+  }
+
+  // @max-width: 900px
+  @media screen and (max-width: 900px) {
+    .home__hero {
+      &::after {
+        opacity: 0.7;
+        background-size: 100% auto;
+      }
+      h1 {
+        width: auto;
+        font-size: 36px;
+        margin-top: 32px;
+        color: #fff;
+        text-align: center;
+      }
+      p {
+        width: auto;
+        opacity: 0.8;
+      }
+      .btn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+      }
+    }  
+    .how-it-works {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .illustration {
+        width: auto;
+        margin: 0 40px;
+        max-width: 300px;
+      }
+      .description {
+        margin: 32px auto 0 auto;
+        h2 {
+          font-size: 30px;
+        }
+        .btn {
+          margin: 40px auto 0 auto;
+        }      
+      }
+    }
+    .benefits {
+      margin-top: 79px;
+      background-position: right center;
+      h2 {
+        font-size: 30px;
+      }
+      .benefits__list {
+        display: block;
+        margin: 32px 0 0 0;
+        li {
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto 32px auto;
+        }
+      }
+      .btn {
+        margin-top: 48px;
+      }
+    }
+    .latest-news {
+      margin-top: 110px;
+      background: none;
+      h2 {
+        font-size: 30px;
+      }
+      .latest-news__list {
+        display: block;       
+        li {
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto 32px auto;
+          .latest-news__photo {
+            height: 207px;
+          }
+        }
+      }
+    }
+    .partners {
+      background: none;
+      margin-bottom: 188px;
+      padding-bottom: 0; 
+      h2 {
+        font-size: 30px;
+      }
+      .partners__list {
+        display: block;
+        margin-top: 40px;
+      }
+    }    
+  }
+  // End @max-width: 900px
+
 }
 .home__hero {
-  padding-top: 64px;
-  background: url('../img/bg-home-hero.png') no-repeat right top / contain;
+  padding-top: 64px;  
   padding-bottom: 100px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;    
+    background: url('../img/bg-home-hero.png') no-repeat right top / contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .wrapper {
+    z-index: 1;
+    position: relative;
+  }
+  @media screen and (max-width: 1200px) {
+    &::after {
+      opacity: 0.7;
+    }    
+  }
   h1 {
     margin-top: 90px;
     width: 680px;
@@ -107,12 +224,42 @@ main.home {
   h2 {
     text-align: center;
   }
-  .partners__list {
-    display: flex;
-    justify-content: space-between;
+  .partners__list {    
     margin-top: 72px;
+    .slick-slide {
+      //width: 25%;
+    }
+    li {
+      text-align: center;      
+    }
     img {
       width: 218px;
+      margin: auto;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    .slick-active {
+      button {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+      }  
+    }
+    button {
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $colorHover;
+      margin: 0 8px;
+      opacity: 0.2;
+      transition: all 250ms ease;
     }
   }
 }
+

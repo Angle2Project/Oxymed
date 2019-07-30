@@ -1,9 +1,45 @@
 $(document).ready(function(){
 
+
+  // Mobile menu 
+  $('[data-action="menu"]').click(function(e){    
+    $('body').toggleClass('menu');
+  });
+
+
   // Sliders
   if($(".slider").length){
     $(".slider").slick();
   }
+
+  // Partners
+  if($("#partners-slider").length){    
+      $("#partners-slider").slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: false,        
+        arrows: false,
+        dots: true,
+        responsive: [{
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }    
+        }]
+      });    
+  }
+
+  // Resize 
+  // $(window).resize(function(e){
+  //   if(window.innerWidth <= 900){
+
+  //   }else{
+  //     $('#partners-slider').slick('unslick');
+  //   }
+  // });
+  
+
   
   // Form 
   $('.form-control input, .form-control textarea').focus(function(e){
@@ -41,7 +77,19 @@ $(document).ready(function(){
       $(this).attr('data-mode', 'show').html('Show More');
       $(this).closest('.careers__list_item').find('.about p').removeAttr('style');
     }    
-    console.log(h, m);
+  });
+
+  $('[data-action="graphic-touch"]').click(function(){
+    if(window.innerWidth <= 900){
+      $(this).find('.graphic--point span').toggleClass('show');
+    }
+  });
+
+  $('.actions__btn.has-popover').click(function(e){
+    console.log(e.target);
+    if($(e.target).closest('i.close').length)$(this).toggleClass('show');
+    if($(e.target).closest('.popover__inner').length)return;    
+    $(this).toggleClass('show');
   });
 
   // $( ".has-popover" ).hover(

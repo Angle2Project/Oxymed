@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Index page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
     <meta name="theme-color" content="#fff" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no" />
@@ -14,45 +14,65 @@
     <!-- BEGIN content -->
     <header>
       <div class="wrapper">
+        <div class="mobile-button" data-action="menu"></div>
         <div class="header__logo">
           <a href="./">
             <img src="./img/main-logo.svg" alt="">
           </a>
         </div>
-        <ul class="header__nav">
-          <li class="">
-            <a href="home.html">Home</a>
-          </li>
-          <li class="">
-            <a href="about.html">Company</a>
-          </li>
-          <li class="active">
-            <a href="products.html">Products</a>
-          </li>
-          <li class="">
-            <a href="">Technology</a>
-          </li>
-          <li class="">
-            <a href="careers.html">Careers</a>
-          </li>
-          <li class="">
-            <a href="news.html">News</a>
-          </li>
-          <li class="">
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <div class="header__nav_wrapper">
+          <ul class="header__nav">
+            <li class="">
+              <a href="home.html">Home</a>
+            </li>
+            <li class="">
+              <a href="about.html">Company</a>
+            </li>
+            <li class="active">
+              <a href="products.html">Products</a>
+            </li>
+            <li class="">
+              <a href="">Technology</a>
+            </li>
+            <li class="">
+              <a href="careers.html">Careers</a>
+            </li>
+            <li class="">
+              <a href="news.html">News</a>
+            </li>
+            <li class="">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="header__nav_social">
+            <a href="">
+              <svg class="icon icon-facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="">
+              <svg class="icon icon-twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href="">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     <main class="products">
       <div class="wrapper">
         <article class="products__item">
-          <div class="marker ready">
-            <img src="./img/marker-ready.svg" alt="">
-            <span>ready</span>
-          </div>
           <div class="products__item_body">
             <div class="item--description">
+              <div class="marker ready">
+                <img src="./img/marker-ready.svg" alt="">
+                <span>ready</span>
+              </div>
               <h2>OxyMend #1</h2>
               <p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab. These methods may prove useful when traditional rehabilitation methods fail. 1. Why Do People Get Addictions?</p>
               <a href="" class="btn border">Get to Know More</a>
@@ -73,12 +93,12 @@
           </div>
         </article>
         <article class="products__item">
-          <div class="marker prototype">
-            <img src="./img/marker-prototype.svg" alt="">
-            <span>prototype</span>
-          </div>
           <div class="products__item_body">
             <div class="item--description">
+              <div class="marker prototype">
+                <img src="./img/marker-prototype.svg" alt="">
+                <span>prototype</span>
+              </div>
               <h2>OxyMend #2</h2>
               <p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab. These methods may prove useful when traditional rehabilitation methods fail. 1. Why Do People Get Addictions?</p>
               <a href="" class="btn border">Get to Know More</a>
@@ -93,12 +113,12 @@
           </div>
         </article>
         <article class="products__item">
-          <div class="marker testing">
-            <img src="./img/marker-testing.svg" alt="">
-            <span>On testing</span>
-          </div>
           <div class="products__item_body">
             <div class="item--description">
+              <div class="marker testing">
+                <img src="./img/marker-testing.svg" alt="">
+                <span>On testing</span>
+              </div>
               <h2>OxyMend #3</h2>
               <p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab. These methods may prove useful when traditional rehabilitation methods fail. 1. Why Do People Get Addictions?</p>
               <a href="" class="btn border">Get to Know More</a>
@@ -119,12 +139,12 @@
           </div>
         </article>
         <article class="products__item">
-          <div class="marker development">
-            <img src="./img/marker-development.svg" alt="">
-            <span>In development</span>
-          </div>
           <div class="products__item_body">
             <div class="item--description">
+              <div class="marker development">
+                <img src="./img/marker-development.svg" alt="">
+                <span>In development</span>
+              </div>
               <h2>OxyMend #4</h2>
               <p>For many years, when people thought of alcohol and drug rehab, the image that almost immediately came to mind was most likely a group of people, sitting in a circle in folding chairs in a big vacant room. Its true that group programs still aid many people in their quest to stop drinking and using illegal substances but most who have fell too deep into their addictions do not find relief this way. There is good news for those who need help getting over their addictions – slowly, there has been a proliferation of alternative therapies to alcohol and drug rehab. These methods may prove useful when traditional rehabilitation methods fail. 1. Why Do People Get Addictions?</p>
               <a href="" class="btn border">Get to Know More</a>

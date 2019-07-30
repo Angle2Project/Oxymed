@@ -37,4 +37,57 @@ main.contact {
     margin-top: 48px;
     height: 466px;
   }
+  // @max-width: 900px
+  @media screen and (max-width: 900px) {
+    margin-top: 32px;
+    padding-top: 48px;
+    padding-bottom: 56px;
+    h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+    .contact__body {
+      flex-direction: column;
+      margin-top: 38px;
+      .contact__form {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        flex-shrink: 0;
+        .form-control,
+        .form-select {
+          line-height: 1;
+        }
+        .contact__form_submit {
+          .btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+      .contact__info {
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 94px;
+        padding-bottom: 46vw;
+        margin: 0;
+        h4 {
+          font-size: 30px;
+          margin-bottom: 24px;
+        }
+        p {
+          font-size: 14px;
+          opacity: 0.8;
+        }
+        .contacts-block {
+          margin-bottom: 34px;
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  // End @max-width: 900px
 }
