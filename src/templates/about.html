@@ -112,20 +112,13 @@ nav: Company
 
   <article class="partners">
     <div class="wrapper">
-      <h2>Investors</h2>
-      <ul class="partners__list">
+      <h2>Our Partners</h2>
+      <ul class="partners__list" id="partners-slider">
+        {% for i in range(0, 4) %}
         <li>
-          <img src="./img/partners-logo.svg" alt="">
+          <img src="./img/partners-logo.svg" alt="" />
         </li>
-        <li>
-          <img src="./img/partners-logo.svg" alt="">
-        </li>
-        <li>
-          <img src="./img/partners-logo.svg" alt="">
-        </li>
-        <li>
-          <img src="./img/partners-logo.svg" alt="">
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </article>

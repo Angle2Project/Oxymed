@@ -591,6 +591,8 @@ main.documents {
 		margin-top: 100px;
 		background-color: #F5F6FB;
 		position: relative;
+		margin-bottom: -100px;
+		padding-bottom: 100px;
 		&::before {
 			content: "";
 			display: block;
@@ -615,6 +617,14 @@ main.documents {
 				}
 			}
 		}		
+	}
+	main.news {
+		.latest-news {
+			background-color: transparent;
+			&::before {
+				display: none;
+			}
+		}
 	}
 }
 // End @max-width: 900px

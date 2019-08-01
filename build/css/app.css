@@ -565,6 +565,10 @@ header .header__logo img {
   height: 100%;
 }
 
+header .header__nav_wrapper {
+  height: 100%;
+}
+
 header .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,20 +1261,28 @@ main.home .benefits .btn {
 }
 
 @media screen and (max-width: 900px) {
+  main.home .home__hero {
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    min-height: initial;
+  }
   main.home .home__hero::after {
-    opacity: 0.7;
-    background-size: 100% auto;
+    display: none;
   }
   main.home .home__hero h1 {
+    padding: 80px 16px 100px 16px;
     width: auto;
     font-size: 36px;
-    margin-top: 32px;
+    margin: 0 -16px 0 -16px;
     color: #fff;
     text-align: center;
+    background: url("../img/bg-home-hero-mobile.png") no-repeat center bottom/cover;
   }
   main.home .home__hero p {
     width: auto;
     opacity: 0.8;
+    margin-top: 8px;
   }
   main.home .home__hero .btn {
     margin-left: auto;
@@ -2448,10 +2460,27 @@ main.careers .careers__more .btn {
 
 @media screen and (max-width: 900px) {
   main.careers .careers__hero {
-    padding-top: 48px;
+    margin-top: 0;
+    padding-top: 0;
+    min-height: initial;
+    overflow: hidden;
   }
   main.careers .careers__hero::after {
-    opacity: 0.7;
+    display: none;
+  }
+  main.careers .careers__hero h1 {
+    padding: 80px 16px 100px 16px;
+    width: auto;
+    font-size: 36px;
+    margin: 0 -16px 0 -16px;
+    color: #fff;
+    text-align: center;
+    background: url("../img/bg-home-hero-mobile.png") no-repeat center bottom/cover;
+  }
+  main.careers .careers__hero p {
+    width: auto;
+    opacity: 0.8;
+    margin-top: 8px !important;
   }
   main.careers .careers__hero .statement {
     width: auto;
@@ -2615,7 +2644,19 @@ main.contact .contact__map {
 
 main.about .home__hero {
   min-height: 716px;
+  position: relative;
+}
+
+main.about .home__hero::after {
+  content: "";
+  display: block;
   background: url("../img/bg-about-hero.png") no-repeat right top/contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
 
 main.about .about__mission {
@@ -2634,6 +2675,7 @@ main.about .about__mission .description h2 {
 
 main.about .about__members {
   margin-top: 105px;
+  overflow: hidden;
   background: url("../img/bg-about-members.svg") no-repeat right center/auto 80%;
 }
 
@@ -2653,6 +2695,9 @@ main.about .about__members .about__members_list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 main.about .about__members .about__members_list li {
@@ -2794,6 +2839,75 @@ main.about .about__members .btn.become {
 
 main.about .partners {
   background: none;
+}
+
+@media screen and (max-width: 900px) {
+  main.about .home__hero {
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    min-height: initial;
+  }
+  main.about .home__hero::after {
+    display: none;
+  }
+  main.about .home__hero h1 {
+    padding: 80px 16px 100px 16px;
+    width: auto;
+    font-size: 36px;
+    margin: 0 -16px 0 -16px;
+    color: #fff;
+    text-align: center;
+    background: url("../img/bg-about-hero-mobile.svg") no-repeat center bottom/cover;
+  }
+  main.about .home__hero p {
+    width: auto;
+    opacity: 0.8;
+    margin-top: 8px;
+  }
+  main.about .home__hero .btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  main.about .about__mission {
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+  main.about .about__mission h2 {
+    font-size: 30px;
+  }
+  main.about .about__mission .description {
+    margin: 0;
+  }
+  main.about .about__members {
+    background: none;
+  }
+  main.about .about__members h2 {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+  main.about .about__members .about__members_list li {
+    width: 100%;
+    max-width: 368px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 900px) and (max-width: 415px) {
+  main.about .about__members .about__members_list li {
+    height: 94vw;
+  }
+  main.about .about__members .about__members_list li h4 {
+    font-size: 20px;
+  }
+  main.about .about__members .about__members_list li .description .description--text {
+    max-height: 112px;
+  }
+  main.about .about__members .about__members_list li .description--share {
+    margin-top: 8px;
+  }
 }
 
 .latest-news {
@@ -3573,6 +3687,8 @@ main.documents .documents__list li .documents__list_links a .icon {
     margin-top: 100px;
     background-color: #F5F6FB;
     position: relative;
+    margin-bottom: -100px;
+    padding-bottom: 100px;
   }
   .latest-news::before {
     content: "";
@@ -3602,6 +3718,12 @@ main.documents .documents__list li .documents__list_links a .icon {
   }
   .latest-news .latest-news__list li .latest-news__photo {
     height: 207px;
+  }
+  main.news .latest-news {
+    background-color: transparent;
+  }
+  main.news .latest-news::before {
+    display: none;
   }
 }
 

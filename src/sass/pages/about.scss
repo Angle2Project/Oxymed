@@ -1,7 +1,18 @@
 main.about {
   .home__hero {
     min-height: 716px;
-    background: url('../img/bg-about-hero.png') no-repeat right top / contain;
+    position: relative;    
+    &::after {
+      content: "";
+      display: block;    
+      background: url('../img/bg-about-hero.png') no-repeat right top / contain;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
   }
   .about__mission {
     margin-top: -32px;
@@ -16,6 +27,7 @@ main.about {
   }
   .about__members {
     margin-top: 105px;
+    overflow: hidden;
     background: url('../img/bg-about-members.svg') no-repeat right center / auto 80%;
     &.no-bg {
       margin-top: 139px;
@@ -28,6 +40,7 @@ main.about {
       margin-right: -32px;
       flex-wrap: wrap;
       margin-bottom: -40px;
+      justify-content: center;
       li {
         width: 368px;
         height: 412px;
@@ -41,7 +54,7 @@ main.about {
         flex-direction: column;
         justify-content: flex-end;
         cursor: pointer;
-        &:hover {
+        &:hover {          
           .description {
             height: 85%;
           }
@@ -130,9 +143,81 @@ main.about {
     .btn.become {
       margin: 56px auto 0 auto;
       width: 230px;
-    }
+    }    
   }
   .partners {
     background: none;
   }
+
+  // @max-width: 900px
+  @media screen and (max-width: 900px) {
+    .home__hero {
+      overflow: hidden;
+      margin-top: 0;
+      padding-top: 0;
+      min-height: initial;
+      &::after {        
+        display: none;
+      }      
+      h1 {
+        padding: 80px 16px 100px 16px;
+        width: auto;
+        font-size: 36px;
+        margin: 0 -16px 0 -16px;
+        color: #fff;
+        text-align: center;
+        background: url('../img/bg-about-hero-mobile.svg') no-repeat center bottom / cover;
+      }
+      p {
+        width: auto;
+        opacity: 0.8;
+        margin-top: 8px;
+      }
+      .btn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+      }
+    }
+    .about__mission {
+      padding: 0;
+      margin: 0;
+      background: none;
+      h2 {
+        font-size: 30px;
+      }
+      .description {
+        margin: 0;
+      }
+    }
+    .about__members {
+      background: none;
+      h2 {
+        font-size: 30px;
+        margin-bottom: 32px;
+      }
+      .about__members_list {
+        li {
+          width: 100%;
+          max-width: 368px; 
+          margin-bottom: 32px;         
+          @media screen and (max-width: 415px) {
+            height: 94vw;
+            h4 {
+              font-size: 20px;
+            }
+            .description {
+              .description--text {
+                max-height: 112px;
+              }
+            }
+            .description--share {
+              margin-top: 8px;
+            }            
+          }
+        }
+      }
+    }
+  }
+  // End @max-width: 900px
 }
