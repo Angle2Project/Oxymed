@@ -111,3 +111,83 @@
     transform: translateY(-50%);
   }    
 }
+
+// Custom checkbox
+.checkbox-custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 16px;
+  [type='checkbox']:checked,
+  [type='checkbox']:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  [type='checkbox'] + label {
+    transition: all 250ms ease;
+  }
+  [type='checkbox']:not(:checked) + label {
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    line-height: 1.2;
+    letter-spacing: normal;    
+  }
+  [type='checkbox']:checked + label {
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    line-height: 1.2;
+    letter-spacing: normal;    
+  }
+  [type='checkbox']:checked + label:before,
+  [type='checkbox']:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;    
+    border: 1px solid #1c8bde;
+    transition: all 0.2s ease;
+  }
+  [type='checkbox']:checked + label:after,
+  [type='checkbox']:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s ease;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  [type='checkbox']:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type='checkbox']:checked + label:after {
+    opacity: 1;
+    transform: scale(1);    
+  }
+  [type='checkbox']:checked + label::before {
+    background-color: $colorHover;
+  }
+  [type='checkbox']:disabled:checked + label:before,
+  [type='checkbox']:disabled:not(:checked) + label:before {
+    border-color: #ccc;
+    background-color: #eee;
+  }
+  [type='checkbox']:disabled:checked + label:after {
+    background: #aaa;
+  }
+}
+.invalid .checkbox-custom {
+  [type='checkbox']:not(:checked):required + label:before {
+    border-color: #e64342;
+  }
+}
+// end Custom checkbox

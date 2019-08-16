@@ -3,22 +3,75 @@ main.contact {
   padding-top: 64px;
   padding-bottom: 70px;
   .contact__body {
-    margin-top: 32px;
+    margin-top: 34px;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: url('../img/bg-contact.svg') no-repeat left bottom / auto 608px;
     .contact__form {
-      width: 432px;
+      width: 560px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+      background-color: #ffffff;
+      padding: 40px 64px;
+      margin-right: 26px;
+      position: relative;
+      .fly {
+        width: 140px;
+        height: 96px;
+        position: absolute;
+        top: -59px;
+        right: -32px;
+        img {
+          width: 100%;
+        }
+      }
       .form-control,
       .form-select {
         margin-bottom: 20px;
       }
+      .form-checkbox {        
+        label {
+          font-size: 12px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.33;
+          opacity: 0.8;
+          p {
+           margin-top: 2px; 
+          }
+          p.all {
+            display: none;
+          }
+          a {
+            display: inline-block;
+            color: $colorHover;
+          }
+        }
+      }
     }
     .contact__info {
-      margin-left: 68px;      
-      padding: 54px 0 280px 100px;
+      margin-left: 0px;      
+      padding: 0px 0 280px 109px;
       width: 582px;
-      background: url('../img/bg-contact.svg') no-repeat center bottom / 100% auto;
+      position: relative;
+      .fly {
+        position: absolute;
+        top: 38px;
+        left: -50px;
+        width: 79px;
+        img {
+          width: 100%;
+        }
+      }
       h4 {
-        margin-bottom: 16px;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.2px;
       }
       & > p {
         font-size: 18px;
@@ -37,6 +90,17 @@ main.contact {
     margin-top: 48px;
     height: 466px;
   }
+
+  // @max-width: 1200px
+  @media screen and (max-width: 1200px) {
+    .contact__body {
+      .contact__info {
+        padding-left: 64px;
+        margin-right: 24px;
+      }
+    }
+  }
+
   // @max-width: 900px
   @media screen and (max-width: 900px) {
     margin-top: 32px;
@@ -48,12 +112,18 @@ main.contact {
     }
     .contact__body {
       flex-direction: column;
-      margin-top: 38px;
+      margin-top: 32px;
+      background: url('../img/bg-contact.svg') no-repeat left bottom / 111% auto;
+      margin: 32px -15px 0 -15px;
+      padding: 0 15px; 
       .contact__form {
-        width: 100%;
-        max-width: 350px;
+        width: 100%;        
         margin: 0 auto;
         flex-shrink: 0;
+        order: 1;
+        .fly {
+          display: none;
+        }
         .form-control,
         .form-select {
           line-height: 1;
@@ -66,12 +136,16 @@ main.contact {
         }
       }
       .contact__info {
+        order: 2;
         width: auto;
         padding-left: 0;
         padding-right: 0;
-        padding-top: 94px;
+        padding-top: 48px;
         padding-bottom: 46vw;
         margin: 0;
+        .fly {
+          display: none;
+        }
         h4 {
           font-size: 30px;
           margin-bottom: 24px;

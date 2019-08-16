@@ -24,7 +24,20 @@ PageList:
 - file: article.html
   ready: 100
 - file: about.html
-  ready: 90
+  ready: 100
+- file: technology.html
+  ready: 100
+
+- file: contact-request-received.html
+  ready: 100
+- file: new-contact-request.html
+  ready: 100
+- file: new-sample-request.html
+  ready: 100
+- file: sample-request-received.html
+  ready: 100
+
+  
 
   
 

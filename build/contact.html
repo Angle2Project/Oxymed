@@ -68,7 +68,52 @@
       <div class="wrapper">
         <h1>Contact</h1>
         <article class="contact__body">
+          <section class="contact__info">
+            <div class="fly">
+              <img src="./img/fly-2.svg" alt="">
+            </div>
+            <h4>We’re friendly 🤗</h4>
+            <p>And always would be glad to see you for the cup of coffee ☕️</p>
+            <ul class="contacts-block">
+              <li>
+                <svg class="icon icon-location">
+                  <use xlink:href="img/sprite.svg#icon-location"></use>
+                </svg>
+                <b>Address:</b>
+                <p>
+                  <span>808 Koch Fords</span>
+                  <span>2-nd Line of address</span>
+                  <span>3-rd Line of address</span>
+                </p>
+              </li>
+              <li>
+                <svg class="icon icon-phone">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                <b>Phone:</b>
+                <a href="tel:478-801-6975">478-801-6975</a>
+              </li>
+              <li>
+                <svg class="icon icon-email">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
+                <b>Email:</b>
+                <a href="mailto:jaida_rath@gmail.com">jaida_rath@gmail.com</a>
+              </li>
+              <li>
+                <svg class="icon icon-email">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
+                <b>Email:</b>
+                <a href="mailto:eulalia_kuhlman@yahoo.com">eulalia_kuhlman@yahoo.com</a>
+              </li>
+            </ul>
+            <p>Or you can write us by the form ✉️</p>
+          </section>
           <section class="contact__form">
+            <div class="fly">
+              <img src="./img/fly-1.svg" alt="">
+            </div>
             <div class="form-control">
               <label>Name</label>
               <input type="text" name="" autocomplete="off">
@@ -110,52 +155,22 @@
               <textarea name="" id=""></textarea>
               <span class="error-text">Send Message</span>
             </div>
+            <div class="form-checkbox">
+              <div class="checkbox-custom close">
+                <input type="checkbox" id="confirm">
+                <label for="confirm">
+                  <p class="pre">By checking this box, I agree I want to receive email, news <a href="" data-action="more">More...</a></p>
+                  <p class="all">By checking this box, I agree I want to receive email, news, and promotions about Oxymend and other PreCare Medical products and services by email, phone and mail to the contact information I am submitting. I consent to PreCare Medical, its affiliates and service providers processing my personal data for these purposes and as described in the Privacy Policy. I understand that I can withdraw my consent at any time.</p>
+                </label>
+              </div>
+            </div>
             <div class="contact__form_submit">
               <button class="btn">Send Message</button>
             </div>
           </section>
-          <section class="contact__info">
-            <h4>But we’re friendly 🤗</h4>
-            <p>And always would be glad to see you for the cup of coffee ☕️</p>
-            <ul class="contacts-block">
-              <li>
-                <svg class="icon icon-location">
-                  <use xlink:href="img/sprite.svg#icon-location"></use>
-                </svg>
-                <b>Address:</b>
-                <p>
-                  <span>808 Koch Fords</span>
-                  <span>2-nd Line of address</span>
-                  <span>3-rd Line of address</span>
-                </p>
-              </li>
-              <li>
-                <svg class="icon icon-phone">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
-                </svg>
-                <b>Phone:</b>
-                <a href="tel:478-801-6975">478-801-6975</a>
-              </li>
-              <li>
-                <svg class="icon icon-email">
-                  <use xlink:href="img/sprite.svg#icon-email"></use>
-                </svg>
-                <b>Email:</b>
-                <a href="mailto:jaida_rath@gmail.com">jaida_rath@gmail.com</a>
-              </li>
-              <li>
-                <svg class="icon icon-email">
-                  <use xlink:href="img/sprite.svg#icon-email"></use>
-                </svg>
-                <b>Email:</b>
-                <a href="mailto:eulalia_kuhlman@yahoo.com">eulalia_kuhlman@yahoo.com</a>
-              </li>
-            </ul>
-            <p>Or you can write us by the form ✉️</p>
-          </section>
         </article>
       </div>
-      <article class="contact__map" style="background: url('./img/map.jpg') no-repeat center / cover;"></article>
+      <article class="contact__map" id="map"></article>
     </main>
     <footer>
       <div class="wrapper">
@@ -213,6 +228,7 @@
     <script type="text/javascript" src="js/lib/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/lib/slick.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.mask.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLasmb4eoCyv4YipnNiCtpHnLxHlOezE" defer></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>

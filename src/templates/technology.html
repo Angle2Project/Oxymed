@@ -1,0 +1,117 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}	
+<script type="text/javascript" src="js/lib/TweenLite.min.js"></script>
+<script type="text/javascript" src="js/lib/CSSPlugin.min.js"></script>
+
+	{% include "partials/_header.html" %}
+
+	<main class="technology">
+		<article class="technology__hero">
+			<div class="wrapper">
+				<div class="technology__hero_description">
+					<h1>Technology</h1>
+					<p>Most people are unaware that the use of Botox for the prevention of migraine headaches came about purely by accident. It all happened through the use of Botox by plastic surgeons. Patients undergoing plastic surgery, who were also experiencing headaches, noticed that their injections of Botox helped with their migraine headaches. Botox, also known as botulinum toxin, is a neurotoxin (a toxin that attacks nerve cells). It was originally approved by the FDA for use in conditions where hyperactivity of muscles was an underlying problem of related health and medical conditions. The theory is that Botox weakens or paralyzes muscles by inhibiting the release of acetylcholine. Acetylcholine is an ester of choline that is thought to play an important role in the transmission of nerve impulses at synapses and myoneural (muscle-nerve) junctions. By inhibiting the release of acetylcholine the nerves cannot cause a muscle contraction, thus relaxing the muscle. Botox is administered by being directly injected into the affected muscles.</p>
+					<div class="hero--links">
+						<a href="">
+							{{mixins.icon('download')}}
+							<span>Patent Information</span>
+						</a>
+						<a href="">
+							{{mixins.icon('newtab')}}
+							<span>Regulatory</span>
+						</a>
+					</div>
+					<a href="" class="btn border">Get to Know More</a>
+				</div>				
+			</div>
+		</article>
+
+		<article class="technology__device" data-action="scroll">
+			<div class="tooltype--mobile">
+				<span></span>
+				<i data-action="close"></i>
+			</div>
+			<div class="wrapper">
+				<!-- Body -->
+			<section class="device__body">
+				<!-- Hover zones	-->
+				<div class="hover-box-1-1" data-hover="box-1"></div>
+				<div class="hover-box-1-2" data-hover="box-1"></div>
+				<div class="hover-box-2" data-hover="box-2"></div>
+				<div class="hover-part-1" data-hover="part-1"></div>
+				<div class="hover-part-2-1" data-hover="part-2"></div>
+				<div class="hover-part-2-2" data-hover="part-2"></div>
+				<div class="hover-part-3-1" data-hover="part-3"></div>
+				<div class="hover-part-3-2" data-hover="part-3"></div>
+				<div class="hover-part-4-1" data-hover="part-4"></div>
+				<div class="hover-part-4-2" data-hover="part-4"></div>
+				<div class="hover-part-4-3" data-hover="part-4"></div>
+				<div class="hover-part-5-1" data-hover="part-5"></div>
+				<div class="hover-part-5-2" data-hover="part-5"></div>
+				<div class="hover-part-6-1" data-hover="part-6"></div>
+				<div class="hover-part-6-2" data-hover="part-6"></div>
+				<div class="hover-part-6-3" data-hover="part-6"></div>
+				<div class="hover-part-6-4" data-hover="part-6"></div>
+				<div class="hover-part-7" data-hover="part-7"></div>
+				<div class="hover-part-8" data-hover="part-8"></div>
+				<div class="hover-part-9" data-hover="part-9"></div>
+				<div class="hover-body-2" data-hover="body-2"></div>
+				<!-- //Hover zones	-->
+
+				<div class="body-1 elem" data-hover="body-1">
+					<div class="tooltype">
+						<span>Some spare part</span>
+					</div>
+					<img src="./img/technology/body-1.png" alt="">
+				</div>
+				<!-- Box -->
+				<section class="device__box">
+					<div class="box-1 elem">
+						<div class="tooltype">
+							<span>Some spare part</span>
+						</div>
+						<img src="./img/technology/box-1.png" alt="">
+					</div>
+						<!-- Parts -->
+						<section class="device__parts">
+							{% for i in range(1, 10) %}
+							<div class="part-{{i}} elem">
+								<div class="tooltype">
+									<span>Some spare part</span>
+								</div>
+								<img src="./img/technology/part-{{i}}.png" alt="">
+							</div>
+							{% endfor %}
+						</section>
+						<!-- /Parts -->
+					<div class="box-2 elem">
+						<div class="tooltype">
+							<span>Some spare part</span>
+						</div>
+						<img src="./img/technology/box-2.png" alt="">
+					</div>
+				</section>
+				<!-- /Box -->
+				<div class="body-2 elem">
+					<div class="tooltype">
+						<span>Some spare part</span>
+					</div>
+					<img src="./img/technology/body-2.png" alt="">
+				</div>
+			</section>
+			<!-- /Body -->
+			</div>			
+		</article>
+		
+	</main>
+
+	{% include "partials/_footer.html" %}
+
+	
+	
+
+{% endblock %}
