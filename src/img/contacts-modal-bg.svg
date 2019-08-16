@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="213" height="79" viewBox="0 0 213 79">
+    <defs>
+        <linearGradient id="a" x1="6.013%" x2="103.95%" y1="60.208%" y2="32.368%">
+            <stop offset="0%" stop-color="#CFE5F5"/>
+            <stop offset="27.568%" stop-color="#CFE5F5" stop-opacity=".524"/>
+            <stop offset="74.283%" stop-color="#4FBBB6" stop-opacity=".049"/>
+            <stop offset="100%" stop-color="#39B4AB" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#EAF3F9" d="M132.39 6.633l36.837 15.774 42.94-7.515z"/>
+        <path fill="#B3CBDE" d="M169.108 22.16l-3.511 19.915 46.57-27.183z"/>
+        <path fill="#EAF3F9" d="M162.687 61.87l11.924-35.71 37.557-11.268z"/>
+        <path fill="#54D8D1" d="M144.866 26.235l24.238-4.052-35.022-14.84a.571.571 0 0 0-.706.834l11.49 18.058z"/>
+        <path fill="#31AAA1" d="M140.44 39.96l4.4-13.622 24.23-3.96-2.003 11.358z"/>
+        <path fill="#B3CBDE" d="M155.765 38.604l-1.315-6.038-4.454 1.345-9.557 6.049z"/>
+        <path fill="#54D8D1" d="M174.764 26.284l-11.075 34.303a.571.571 0 0 1-1.061.067l-12.445-26.591 24.581-7.779z"/>
+        <path stroke="url(#a)" stroke-dasharray="5" stroke-linecap="round" stroke-width="2" d="M135.217 41.589c-9.784 10.42-27.463 17.082-53.04 19.986-24.056 2.732-43.82-4.788-51.772-8.496-10.617-4.95-19.564-17.9-9.614-39.237C25.985 2.704 43.915-2.788 57.01 2.591c11.62 4.773 19.345 18.861 12.335 33.893-14.908 31.97-49.54 42.945-69.252 40" opacity=".7" transform="translate(1 1)"/>
+    </g>
+</svg>

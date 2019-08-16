@@ -91,6 +91,62 @@ main.contact {
     height: 466px;
   }
 
+  .modal {
+    padding: 0 16px;
+    .modal__body {
+      padding-top: 56px;
+      padding-bottom: 64px;
+      position: relative;
+      i.close {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        cursor: pointer;
+        &::before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: #333;
+          transform: rotate(45deg);
+          transform-origin: center;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: #333;
+          transform: rotate(-45deg);
+          margin-top: -2px;
+        }
+      }
+      .contact-modal-img {
+        margin: auto;
+        width: 212px;
+        margin-bottom: 24px;
+        img {
+          width: auto;
+        }
+      }
+      h2 {
+        text-align: center;
+      }
+      p {
+        margin-top: 24px;
+      }
+      .btn {
+        margin: 48px auto 0 auto;
+      }
+    }
+  }
+
   // @max-width: 1200px
   @media screen and (max-width: 1200px) {
     .contact__body {
