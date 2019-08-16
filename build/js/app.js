@@ -462,7 +462,7 @@ $(document).ready(function(){
     });    
   }
   $('.modal').click(function(e){
-    if(!$(e.target).closest('.modal__wrapper').length || $(e.target).hasClass('close')){
+    if(!$(e.target).closest('.modal__body').length || $(e.target).hasClass('close')){
       $(this).fadeOut(250);
     }    
   });

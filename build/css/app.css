@@ -5035,6 +5035,7 @@ main.documents .documents__list li .documents__list_links a .icon {
   left: 0;
   z-index: 10;
   text-align: center;
+  display: none;
 }
 
 .modal .modal__wrapper {
