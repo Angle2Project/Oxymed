@@ -1031,6 +1031,12 @@ footer .footer__copyright p {
   }
 }
 
+@media screen and (max-width: 900px) and (max-width: 900px) {
+  footer .footer__copyright p {
+    line-height: 1.43;
+  }
+}
+
 .icon-location {
   fill: #1c8bde;
   width: 24px;
@@ -1367,6 +1373,7 @@ main.home .benefits .btn {
     overflow: hidden;
     margin-top: 0;
     padding-top: 0;
+    padding-bottom: 0;
     min-height: initial;
   }
   main.home .home__hero::after {
@@ -2181,7 +2188,7 @@ main.product .faq__list li .answer p a {
     max-width: 350px;
   }
   main.product .product__about {
-    margin-top: 94px;
+    margin-top: 44px;
   }
   main.product .product__about .wrapper {
     -webkit-box-orient: vertical;
@@ -2600,7 +2607,7 @@ main.careers .careers__more .btn {
     font-size: 16px;
   }
   main.careers .careers__list {
-    margin-top: 100px;
+    margin-top: 24px;
   }
   main.careers .careers__list h1 {
     font-size: 30px;
@@ -2622,6 +2629,9 @@ main.careers .careers__more .btn {
     width: auto;
     margin-right: 0;
   }
+  main.careers .careers__list .careers__list_item .item--body .about p {
+    max-height: 178px;
+  }
   main.careers .careers__list .careers__list_item .item--body .skills {
     margin-top: 24px;
   }
@@ -2639,7 +2649,8 @@ main.careers .careers__more .btn {
 main.contact {
   margin-top: 64px;
   padding-top: 64px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
+  margin-bottom: -130px;
 }
 
 main.contact .contact__body {
@@ -2749,7 +2760,11 @@ main.contact .contact__body .contact__form_submit {
 
 main.contact .contact__map {
   margin-top: 48px;
-  height: 466px;
+  height: 566px;
+}
+
+main.contact .contact__map .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+  bottom: 257px !important;
 }
 
 main.contact .modal {
@@ -2844,6 +2859,7 @@ main.contact .modal .modal__body .btn {
     margin-top: 32px;
     padding-top: 48px;
     padding-bottom: 56px;
+    margin-bottom: -220px;
   }
   main.contact h1 {
     font-size: 32px;
@@ -2867,6 +2883,8 @@ main.contact .modal .modal__body .btn {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   main.contact .contact__body .contact__form .fly {
     display: none;
@@ -3114,6 +3132,7 @@ main.about .partners {
     margin-top: 0;
     padding-top: 0;
     min-height: initial;
+    padding-bottom: 50px;
   }
   main.about .home__hero::after {
     display: none;
@@ -3150,6 +3169,7 @@ main.about .partners {
   }
   main.about .about__members {
     background: none;
+    margin-top: 50px !important;
   }
   main.about .about__members h2 {
     font-size: 30px;
@@ -3174,6 +3194,12 @@ main.about .partners {
   }
   main.about .about__members .about__members_list li .description--share {
     margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main.about .partners {
+    margin-top: 60px;
   }
 }
 
@@ -5263,11 +5289,11 @@ main.documents .documents__list li .documents__list_links a .icon {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 8px;
   }
   main.article-one .article .article-one__actions .actions .actions__btn .icon {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
     margin: 0 20px;
     -ms-flex-negative: 0;
     flex-shrink: 0;

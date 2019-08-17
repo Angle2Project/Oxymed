@@ -142,7 +142,7 @@ main.careers {
       }
     }
     .careers__list {
-      margin-top: 100px;
+      margin-top: 24px;
       h1 {
         font-size: 30px;
         margin-bottom: 32px;
@@ -159,6 +159,9 @@ main.careers {
           .about {
             width: auto;
             margin-right: 0;
+            p {
+              max-height: 178px;
+            }
           }
           .skills {
             margin-top: 24px;

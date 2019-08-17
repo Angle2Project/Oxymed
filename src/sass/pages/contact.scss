@@ -1,7 +1,8 @@
 main.contact {
   margin-top: 64px;
   padding-top: 64px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
+  margin-bottom: -130px;
   .contact__body {
     margin-top: 34px;
     display: flex;
@@ -88,7 +89,10 @@ main.contact {
   }
   .contact__map {
     margin-top: 48px;
-    height: 466px;
+    height: 566px;
+    .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+      bottom: 257px!important;
+    }
   }
 
   .modal {
@@ -162,6 +166,7 @@ main.contact {
     margin-top: 32px;
     padding-top: 48px;
     padding-bottom: 56px;
+    margin-bottom: -220px;
     h1 {
       font-size: 32px;
       text-align: center;
@@ -177,6 +182,8 @@ main.contact {
         margin: 0 auto;
         flex-shrink: 0;
         order: 1;
+        padding-left: 24px;
+        padding-right: 24px;
         .fly {
           display: none;
         }
@@ -217,7 +224,7 @@ main.contact {
           }
         }
       }
-    }
+    }    
   }
   // End @max-width: 900px
 }
