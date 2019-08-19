@@ -463,7 +463,7 @@ $(document).ready(function(){
     var marker = new google.maps.Marker({
       position: {lat: 42.279255, lng: -83.744795},
       map: map,
-      icon: '../img/map-marker.svg',
+      icon: './img/map-marker.svg',
       title: '330 E Liberty St STE 400, Ann Arbor, MI, 48104, USA'
     });
   }
