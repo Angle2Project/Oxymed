@@ -1,6 +1,4 @@
-main.home {
-  
-  
+main.home {  
   .benefits {
     margin-top: 200px;
     text-align: center;
@@ -63,7 +61,10 @@ main.home {
       min-height: initial;
       &::after {        
         display: none;
-      }      
+      }
+      .home__hero__bg {
+        display: none;
+      }
       h1 {
         padding: 80px 16px 100px 16px;
         width: auto;
@@ -161,38 +162,42 @@ main.home {
   padding-top: 64px;  
   padding-bottom: 100px;
   position: relative;
-  &::after {
-    content: "";
-    display: block;    
-    background: url('../img/bg-home-hero.png') no-repeat right top / contain;
+  .home__hero__img {    
+    position: absolute;
+    top: 250px;
+    left: 48%;
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+  .home__hero__bg {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: 0;    
     z-index: 0;
+    max-width: 50%;
+    max-height: 100%;
+    img {
+      width: 100%;
+    }
   }
   .wrapper {
     z-index: 1;
     position: relative;
-  }
-  @media screen and (max-width: 1200px) {
-    &::after {
-      opacity: 0.7;
-    }    
-  }
+  }  
   h1 {
     margin-top: 90px;
-    width: 680px;
+    width: 50%;
     font-size: 56px;  
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: -0.34px;      
+    letter-spacing: -0.34px;
   }
   p {
     margin-top: 24px;
-    width: 520px;
+    width: 50%;
   }
   .btn {
     margin-top: 56px;

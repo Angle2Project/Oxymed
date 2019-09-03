@@ -30,27 +30,7 @@ main.contact {
       .form-control,
       .form-select {
         margin-bottom: 20px;
-      }
-      .form-checkbox {        
-        label {
-          font-size: 12px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.33;
-          opacity: 0.8;
-          p {
-           margin-top: 2px; 
-          }
-          p.all {
-            display: none;
-          }
-          a {
-            display: inline-block;
-            color: $colorHover;
-          }
-        }
-      }
+      }      
     }
     .contact__info {
       margin-left: 0px;      
@@ -227,4 +207,25 @@ main.contact {
     }    
   }
   // End @max-width: 900px
+}
+
+.form-checkbox {
+  label {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    opacity: 0.8;
+    p {
+     margin-top: 2px!important; 
+    }
+    p.all {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      color: $colorHover;
+    }
+  }
 }

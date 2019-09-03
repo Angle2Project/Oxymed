@@ -10,8 +10,8 @@ $(document).ready(function(){
 
 
   // Sliders
-  if($(".slider").length){
-    $(".slider").slick();
+  if($(".products .slider").length){
+    $(".products .slider").slick();
   }
 
   // Partners
@@ -288,8 +288,38 @@ $(document).ready(function(){
     });
   }
 
+  $('.trial__tabs_switch li').click(function(e){    
+    $(this).closest('ul').find('li').toggleClass('current');
+    $('.product__request_trial .trial__tabs .trial__tabs_tab').toggleClass('current');
+    $('.product__request_trial .trial__tabs .trial__tabs_tab:not(".current")').hide();
+    $('.product__request_trial .trial__tabs .trial__tabs_tab.current').show();
+  });
+
+  if($(".product .slider").length){
+    $(".product .slider").slick({
+      dots: true
+    });
+    setTimeout(function(){
+      $('.product__request_trial .trial__tabs .trial__tabs_tab:not(".current")').hide();
+    }, 1000);
+  }
+
+  
+  if($('.product__table').length){
+    let title = [];
+    $('.product__table .table .tr.head .th').each(function(i, el){
+      title.push($(el).text());
+    });    
+    $('.product__table .table .tr:not(.head)').each(function(i, el){
+      $(el).find('.td').each(function(i, el){
+        if(title[i].length)$(el).prepend('<span>'+title[i]+'</span>');        
+      });
+    });    
+  }
+  
+
   // Show more checkbox
-  $('.contact [data-action="more"]').click(function(e){
+  $('.contact [data-action="more"], .product [data-action="more"]').click(function(e){
     e.preventDefault();
     $(this).closest('label').find('.pre').hide();
     $(this).closest('label').find('.all').show();
@@ -471,5 +501,17 @@ $(document).ready(function(){
     if(!$(e.target).closest('.modal__body').length || $(e.target).hasClass('close')){
       $(this).fadeOut(250);
     }    
+  });
+
+  $('[data-action="copy-link"]').click(function(e){
+    let href = $(this).attr('data-href');    
+    if(!navigator.clipboard) {    
+      return 
+    }    
+    try {
+      navigator.clipboard.writeText(href);      
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
   });
 });

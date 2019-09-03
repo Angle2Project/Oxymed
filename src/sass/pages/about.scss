@@ -17,7 +17,23 @@ main.about {
   .about__mission {
     margin-top: -32px;
     padding: 82px 0 100px 0;
-    background: url('../img/bg-about-mission.svg') no-repeat left top / contain;
+    position: relative;
+    //background: url('../img/bg-about-mission.jpg') no-repeat left top / contain;
+    .about__mission_bg {
+      position: absolute;
+      top: 0;
+      left: 0;      
+      max-width: 600px;
+      z-index: 0;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
     .description {
       margin-left: 499px;
       h2 {
@@ -30,7 +46,7 @@ main.about {
     overflow: hidden;
     background: url('../img/bg-about-members.svg') no-repeat right center / auto 80%;
     &.no-bg {
-      margin-top: 139px;
+      margin-top: 113px;
     }
     h2 {
       margin-bottom: 48px;
@@ -141,7 +157,7 @@ main.about {
       }
     }
     .btn.become {
-      margin: 56px auto 0 auto;
+      margin: 56px auto 26px auto;
       width: 230px;
     }    
   }

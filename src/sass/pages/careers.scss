@@ -1,35 +1,40 @@
 main.careers {
   padding-bottom: 72px;
   .careers__hero {
-    padding-top: 64px;        
+    padding-top: 64px;  
+    .careers__hero_bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      max-width: 50%;
+      max-height: 100%;
+      img {
+        width: 100%;
+      }
+    }      
     &::after {
       content: "";
       display: block;    
       background: url('../img/bg-home-hero.png') no-repeat right top / contain;
       position: absolute;
       top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      right: 0;      
       z-index: 0;
+      width: 50%;
       background: url('../img/bg-careers-hero.png') no-repeat right top / auto 731px;
-    }
-    @media screen and (max-width: 1200px) {
-      &::after {
-        opacity: 0.7;
-      }      
-    }
+    }    
     .wrapper {
       position: relative;
       z-index: 1;
     }
-    .careers__hero_bg {
+    .careers__hero_bg-wrap {
       background: url("../img/bg-latest-news.svg") no-repeat left bottom/auto 442px;
       padding-bottom: 40px;
     }
     .statement {
       margin-top: 145px;
-      width: 550px;
+      width: 50%;
       & > p {
         margin-top: 24px;
         opacity: 0.8;
@@ -106,6 +111,9 @@ main.careers {
       padding-top: 0;
       min-height: initial;
       overflow: hidden;
+      .careers__hero_bg {
+        display: none;
+      }
       &::after {        
         display: none;
       }

@@ -21,10 +21,14 @@ nav: News
         'latest-news-1.png' } ] %} {% for item in latestNews %}
         <li class="latest-news__item {% if loop.index == 1 %} first-news-item{% endif %}">
           <div class="latest-news__photo">
-            <img src="./img/{{ item.picPath }}" alt="" />
+            <a href="">
+              <img src="./img/{{ item.picPath }}" alt="" />
+            </a>            
           </div>
           <div class="latest-news__text">
-            <h4>{{ item.title }}</h4>
+            <h4>
+              <a href="">{{ item.title }}</a>
+            </h4>
             <time class="time">{{ mixins.icon('time') }} 6 minutes to read • Jun 11</time>
             <div class="latest-news__descr">
               <p>
@@ -49,7 +53,7 @@ nav: News
 										</div>
                   </div>
                 </div>
-                <div class="actions__btn">
+                <div class="actions__btn" data-action="copy-link" data-href="https://www.ukr.net/">
                   {{ mixins.icon('link') }}
                 </div>
               </div>
